@@ -1,0 +1,167 @@
+{
+  "info": {
+    "name": "Novas Security Regression Suite",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "SECURITY | Login | Setup token",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{base_url}}/api/v1/auth/login",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"phone\":\"{{valid_phone}}\",\"password\":\"{{valid_password}}\"}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var json = pm.response.json();",
+              "pm.test('Login successful', function(){ pm.response.to.have.status(200); });",
+              "pm.environment.set('token', json.data.access_token);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "SECURITY | Rooms Search | SQL Injection",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": "{{base_url}}/api/v1/admin/rooms?search=' OR '1'='1"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('SQL injection must not cause server error', function(){ pm.expect(pm.response.code).to.be.below(500); });",
+              "pm.test('Response should be safe JSON', function(){ pm.expect(() => pm.response.json()).to.not.throw; });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "SECURITY | Rooms Search | XSS Payload",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": "{{base_url}}/api/v1/admin/rooms?search=<script>alert(1)</script>"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('XSS payload must not cause server error', function(){ pm.expect(pm.response.code).to.be.below(500); });",
+              "pm.test('Response must not echo script payload', function(){ pm.expect(pm.response.text()).to.not.include('<script>alert(1)</script>'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "SECURITY | Branch Search | SQL Injection",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": "{{base_url}}/api/v1/admin/branches?search=' OR '1'='1"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Branch SQL injection handled safely', function(){ pm.expect(pm.response.code).to.be.below(500); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "SECURITY | Branch Search | XSS Payload",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": "{{base_url}}/api/v1/admin/branches?search=<script>alert(1)</script>"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Branch XSS handled safely', function(){ pm.expect(pm.response.code).to.be.below(500); });",
+              "pm.test('Response must not echo script payload', function(){ pm.expect(pm.response.text()).to.not.include('<script>alert(1)</script>'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "SECURITY | Auth Login | SQL Injection Phone",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{base_url}}/api/v1/auth/login",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"phone\":\"' OR '1'='1\",\"password\":\"{{valid_password}}\"}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var json = pm.response.json();",
+              "pm.test('Login SQL injection rejected safely', function(){ pm.expect([400,401,403,422]).to.include(pm.response.code); });",
+              "pm.test('No successful login', function(){ pm.expect(json.success).to.eql(false); });"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
