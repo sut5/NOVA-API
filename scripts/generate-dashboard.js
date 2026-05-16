@@ -53,7 +53,7 @@ const html = `
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>Novas Automation Dashboard</title>
+  <title>Novas API Automation Reports Dashboard - May 2026 Release</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -84,11 +84,16 @@ const html = `
       background: #334155;
     }
 
-    a {
-      color: #38bdf8;
+    .card-link {
+      display: block;
       text-decoration: none;
+      color: inherit;
+    }
+
+    .card h2 {
+      color: #38bdf8;
       font-size: 18px;
-      font-weight: bold;
+      margin: 0 0 12px 0;
     }
 
     p {
@@ -98,16 +103,18 @@ const html = `
   </style>
 </head>
 <body>
-  <h1>Novas API Automation Dashboard</h1>
+  <h1>Novas API Automation Reports Dashboard - May 2026 Release</h1>
 
   <div class="grid">
     ${reports.map(r => {
       const exists = fs.existsSync(path.join(__dirname, '../reports', r.file));
       return `
-      <div class="card">
-        <a href="./${r.file}">${r.name}</a>
-        <p>${exists ? 'Open detailed regression execution report.' : 'Report not yet generated.'}</p>
-      </div>
+      <a class="card-link" href="./${r.file}">
+        <div class="card">
+          <h2>${r.name}</h2>
+          <p>${exists ? 'Open detailed regression execution report.' : 'Report not yet generated.'}</p>
+        </div>
+      </a>
       `;
     }).join('')}
   </div>
