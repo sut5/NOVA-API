@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Novas Guests Regression Suite" tests="11" time="4.751">
+  <testsuite name="GUESTS | Login | Setup token" id="1de06eec-c25e-402d-842c-f0de140633b2" timestamp="2026-05-16T04:56:38.596Z" tests="2" failures="0" errors="0" time="1.209">
+    <testcase name="Login status is 200" time="1.209" classname="GuestsLoginSetupToken"/>
+    <testcase name="Token exists" time="1.209" classname="GuestsLoginSetupToken"/>
+  </testsuite>
+  <testsuite name="GUESTS | GET Guests | Valid token" id="6fa4a54b-b7be-4311-b1f2-1d0ca2fb72db" timestamp="2026-05-16T04:56:38.596Z" tests="3" failures="0" errors="0" time="0.331">
+    <testcase name="Status acceptable" time="0.331" classname="GuestsGetGuestsValidToken"/>
+    <testcase name="No server error" time="0.331" classname="GuestsGetGuestsValidToken"/>
+    <testcase name="Response time acceptable" time="0.331" classname="GuestsGetGuestsValidToken"/>
+  </testsuite>
+  <testsuite name="GUESTS | GET Guests | Missing token" id="fc772d57-9c8f-4701-894b-a03079fed7e8" timestamp="2026-05-16T04:56:38.596Z" tests="2" failures="0" errors="0" time="0.418">
+    <testcase name="Missing token rejected" time="0.418" classname="GuestsGetGuestsMissingToken"/>
+    <testcase name="No server error" time="0.418" classname="GuestsGetGuestsMissingToken"/>
+  </testsuite>
+  <testsuite name="GUESTS | GET Guests | Invalid token" id="412e7336-aa8b-4224-9c05-cc5a7f982a14" timestamp="2026-05-16T04:56:38.596Z" tests="2" failures="0" errors="0" time="0.331">
+    <testcase name="Invalid token rejected" time="0.331" classname="GuestsGetGuestsInvalidToken"/>
+    <testcase name="No server error" time="0.331" classname="GuestsGetGuestsInvalidToken"/>
+  </testsuite>
+  <testsuite name="GUESTS | GET Single Guest | Existing or saved id" id="4308abec-4c46-486d-b1e4-f6b94ee7895f" timestamp="2026-05-16T04:56:38.596Z" tests="3" failures="0" errors="0" time="0.356">
+    <testcase name="Status acceptable" time="0.356" classname="GuestsGetSingleGuestExistingOrSavedId"/>
+    <testcase name="No server error" time="0.356" classname="GuestsGetSingleGuestExistingOrSavedId"/>
+    <testcase name="Response is JSON" time="0.356" classname="GuestsGetSingleGuestExistingOrSavedId"/>
+  </testsuite>
+  <testsuite name="GUESTS | GET Single Guest | Invalid UUID" id="e6d176b5-2212-4ade-b872-71be0e592080" timestamp="2026-05-16T04:56:38.596Z" tests="2" failures="0" errors="0" time="0.301">
+    <testcase name="Invalid UUID handled safely" time="0.301" classname="GuestsGetSingleGuestInvalidUuid"/>
+    <testcase name="No server error" time="0.301" classname="GuestsGetSingleGuestInvalidUuid"/>
+  </testsuite>
+  <testsuite name="GUESTS | GET Single Guest | Malformed UUID" id="e299add8-93fb-473c-b248-89b654ddb2da" timestamp="2026-05-16T04:56:38.596Z" tests="2" failures="0" errors="0" time="0.311">
+    <testcase name="Malformed UUID handled safely" time="0.311" classname="GuestsGetSingleGuestMalformedUuid"/>
+    <testcase name="No server error" time="0.311" classname="GuestsGetSingleGuestMalformedUuid"/>
+  </testsuite>
+  <testsuite name="GUESTS | GET Guests | Invalid pagination" id="ceb7367c-de32-4b8b-9e78-2a2378016723" timestamp="2026-05-16T04:56:38.596Z" tests="2" failures="0" errors="0" time="0.308">
+    <testcase name="Invalid pagination handled safely" time="0.308" classname="GuestsGetGuestsInvalidPagination"/>
+    <testcase name="No server error" time="0.308" classname="GuestsGetGuestsInvalidPagination"/>
+  </testsuite>
+  <testsuite name="GUESTS | GET Guests | SQL injection search" id="19de9118-be4b-4e69-9184-c9ef9be1905d" timestamp="2026-05-16T04:56:38.596Z" tests="2" failures="0" errors="0" time="0.325">
+    <testcase name="SQL injection handled safely" time="0.325" classname="GuestsGetGuestsSqlInjectionSearch"/>
+    <testcase name="Response is not server error" time="0.325" classname="GuestsGetGuestsSqlInjectionSearch"/>
+  </testsuite>
+  <testsuite name="GUESTS | GET Guests | XSS search" id="560abd32-b652-4cf3-a204-56097889c292" timestamp="2026-05-16T04:56:38.596Z" tests="2" failures="0" errors="0" time="0.317">
+    <testcase name="XSS handled safely" time="0.317" classname="GuestsGetGuestsXssSearch"/>
+    <testcase name="Response body does not echo script unsafely" time="0.317" classname="GuestsGetGuestsXssSearch"/>
+  </testsuite>
+  <testsuite name="GUESTS | POST Create Guest | Empty payload validation" id="8b6a0b8a-cb32-4e2a-b78a-fc08fc3b65fb" timestamp="2026-05-16T04:56:38.596Z" tests="2" failures="0" errors="0" time="0.544">
+    <testcase name="Validation or auth status acceptable" time="0.544" classname="GuestsPostCreateGuestEmptyPayloadValidation"/>
+    <testcase name="No server error" time="0.544" classname="GuestsPostCreateGuestEmptyPayloadValidation"/>
+  </testsuite>
+</testsuites>

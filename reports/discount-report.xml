@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Novas Discount Regression Suite" tests="14" time="7.163">
+  <testsuite name="DISCOUNT | Login | Setup token" id="74ea147c-82ed-488e-b07d-7827ada053b5" timestamp="2026-05-16T04:34:19.927Z" tests="2" failures="0" errors="0" time="1.240">
+    <testcase name="Login status is 200" time="1.240" classname="DiscountLoginSetupToken"/>
+    <testcase name="Token exists" time="1.240" classname="DiscountLoginSetupToken"/>
+  </testsuite>
+  <testsuite name="DISCOUNT | GET Discounts | Valid token" id="e0597d0b-ea9a-4d79-8ba3-ae6c24b4156f" timestamp="2026-05-16T04:34:19.927Z" tests="4" failures="0" errors="0" time="0.315">
+    <testcase name="Status is acceptable" time="0.315" classname="DiscountGetDiscountsValidToken"/>
+    <testcase name="No server error" time="0.315" classname="DiscountGetDiscountsValidToken"/>
+    <testcase name="Discount response has data" time="0.315" classname="DiscountGetDiscountsValidToken"/>
+    <testcase name="Response time acceptable" time="0.315" classname="DiscountGetDiscountsValidToken"/>
+  </testsuite>
+  <testsuite name="DISCOUNT | GET Active Discounts" id="cb144acb-cfb7-4c9d-a790-34eb9ed7e490" timestamp="2026-05-16T04:34:19.927Z" tests="2" failures="0" errors="0" time="0.312">
+    <testcase name="Active discount status acceptable" time="0.312" classname="DiscountGetActiveDiscounts"/>
+    <testcase name="No server error" time="0.312" classname="DiscountGetActiveDiscounts"/>
+  </testsuite>
+  <testsuite name="DISCOUNT | GET Expired Discounts" id="65a12da2-2319-48d0-9413-f593df3398dd" timestamp="2026-05-16T04:34:19.927Z" tests="2" failures="0" errors="0" time="0.304">
+    <testcase name="Expired discount status acceptable" time="0.304" classname="DiscountGetExpiredDiscounts"/>
+    <testcase name="No server error" time="0.304" classname="DiscountGetExpiredDiscounts"/>
+  </testsuite>
+  <testsuite name="DISCOUNT | GET Scheduled Discounts" id="e4ab6370-d779-4b89-8ca0-28061d53e4f1" timestamp="2026-05-16T04:34:19.927Z" tests="2" failures="0" errors="0" time="0.385">
+    <testcase name="Scheduled discount status acceptable" time="0.385" classname="DiscountGetScheduledDiscounts"/>
+    <testcase name="No server error" time="0.385" classname="DiscountGetScheduledDiscounts"/>
+  </testsuite>
+  <testsuite name="DISCOUNT | GET Discounts | Missing token" id="62972ffb-e32e-4d54-b545-424ac2814b0c" timestamp="2026-05-16T04:34:19.927Z" tests="2" failures="0" errors="0" time="1.214">
+    <testcase name="Missing token rejected" time="1.214" classname="DiscountGetDiscountsMissingToken"/>
+    <testcase name="No server error" time="1.214" classname="DiscountGetDiscountsMissingToken"/>
+  </testsuite>
+  <testsuite name="DISCOUNT | GET Discounts | Invalid token" id="73036da5-e861-47e2-9c01-25fd51407006" timestamp="2026-05-16T04:34:19.927Z" tests="2" failures="0" errors="0" time="0.951">
+    <testcase name="Invalid token rejected" time="0.951" classname="DiscountGetDiscountsInvalidToken"/>
+    <testcase name="No server error" time="0.951" classname="DiscountGetDiscountsInvalidToken"/>
+  </testsuite>
+  <testsuite name="DISCOUNT | GET Single Discount | Existing or saved id" id="f01a2f82-e511-4d07-8c80-41e9c01ab42c" timestamp="2026-05-16T04:34:19.927Z" tests="3" failures="0" errors="0" time="0.304">
+    <testcase name="Status is acceptable" time="0.304" classname="DiscountGetSingleDiscountExistingOrSavedId"/>
+    <testcase name="No server error" time="0.304" classname="DiscountGetSingleDiscountExistingOrSavedId"/>
+    <testcase name="Response is JSON" time="0.304" classname="DiscountGetSingleDiscountExistingOrSavedId"/>
+  </testsuite>
+  <testsuite name="DISCOUNT | GET Single Discount | Invalid UUID" id="7377758f-d201-488f-9baf-b1816fb80bd0" timestamp="2026-05-16T04:34:19.927Z" tests="2" failures="0" errors="0" time="0.327">
+    <testcase name="Invalid UUID handled safely" time="0.327" classname="DiscountGetSingleDiscountInvalidUuid"/>
+    <testcase name="No server error" time="0.327" classname="DiscountGetSingleDiscountInvalidUuid"/>
+  </testsuite>
+  <testsuite name="DISCOUNT | GET Single Discount | Malformed UUID" id="96821c5d-327a-425a-be0b-b1de61e0ed52" timestamp="2026-05-16T04:34:19.927Z" tests="2" failures="0" errors="0" time="0.297">
+    <testcase name="Malformed UUID handled safely" time="0.297" classname="DiscountGetSingleDiscountMalformedUuid"/>
+    <testcase name="No server error" time="0.297" classname="DiscountGetSingleDiscountMalformedUuid"/>
+  </testsuite>
+  <testsuite name="DISCOUNT | GET Discounts | Invalid pagination" id="88d73aa3-f429-486a-9112-7c5715a316e9" timestamp="2026-05-16T04:34:19.927Z" tests="2" failures="0" errors="0" time="0.617">
+    <testcase name="Invalid pagination handled safely" time="0.617" classname="DiscountGetDiscountsInvalidPagination"/>
+    <testcase name="No server error" time="0.617" classname="DiscountGetDiscountsInvalidPagination"/>
+  </testsuite>
+  <testsuite name="DISCOUNT | GET Discounts | SQL injection search" id="7d2b303e-44e6-4dbd-94ea-04d27718917a" timestamp="2026-05-16T04:34:19.927Z" tests="2" failures="0" errors="0" time="0.305">
+    <testcase name="SQL injection handled safely" time="0.305" classname="DiscountGetDiscountsSqlInjectionSearch"/>
+    <testcase name="Response is not server error" time="0.305" classname="DiscountGetDiscountsSqlInjectionSearch"/>
+  </testsuite>
+  <testsuite name="DISCOUNT | GET Discounts | XSS search" id="38910975-feb8-44ae-bd53-976f94c2b58f" timestamp="2026-05-16T04:34:19.927Z" tests="2" failures="0" errors="0" time="0.298">
+    <testcase name="XSS handled safely" time="0.298" classname="DiscountGetDiscountsXssSearch"/>
+    <testcase name="Response body does not echo script unsafely" time="0.298" classname="DiscountGetDiscountsXssSearch"/>
+  </testsuite>
+  <testsuite name="DISCOUNT | POST Create Discount | Empty payload validation" id="e899aa0c-c2df-4a98-9dfd-6960a0b961a5" timestamp="2026-05-16T04:34:19.927Z" tests="3" failures="0" errors="0" time="0.294">
+    <testcase name="Validation or auth status acceptable" time="0.294" classname="DiscountPostCreateDiscountEmptyPayloadValidation"/>
+    <testcase name="No server error" time="0.294" classname="DiscountPostCreateDiscountEmptyPayloadValidation"/>
+    <testcase name="Validation response success false" time="0.294" classname="DiscountPostCreateDiscountEmptyPayloadValidation"/>
+  </testsuite>
+</testsuites>

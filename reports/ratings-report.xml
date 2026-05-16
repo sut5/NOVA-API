@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Novas Ratings Regression Suite" tests="11" time="6.350">
+  <testsuite name="RATINGS | Login | Setup token" id="dc394020-8a38-414d-8648-5803b1a82631" timestamp="2026-05-16T05:03:30.638Z" tests="2" failures="0" errors="0" time="1.194">
+    <testcase name="Login status is 200" time="1.194" classname="RatingsLoginSetupToken"/>
+    <testcase name="Token exists" time="1.194" classname="RatingsLoginSetupToken"/>
+  </testsuite>
+  <testsuite name="RATINGS | GET Ratings | Valid token" id="40ca98fc-afcc-4635-84c0-8930c07d6c7f" timestamp="2026-05-16T05:03:30.638Z" tests="4" failures="0" errors="0" time="0.303">
+    <testcase name="Status acceptable" time="0.303" classname="RatingsGetRatingsValidToken"/>
+    <testcase name="No server error" time="0.303" classname="RatingsGetRatingsValidToken"/>
+    <testcase name="Ratings response has data" time="0.303" classname="RatingsGetRatingsValidToken"/>
+    <testcase name="Response time acceptable" time="0.303" classname="RatingsGetRatingsValidToken"/>
+  </testsuite>
+  <testsuite name="RATINGS | GET Ratings | Missing token" id="2ee825cb-3273-416d-b963-a69357cb1be5" timestamp="2026-05-16T05:03:30.638Z" tests="2" failures="0" errors="0" time="1.139">
+    <testcase name="Missing token rejected" time="1.139" classname="RatingsGetRatingsMissingToken"/>
+    <testcase name="No server error" time="1.139" classname="RatingsGetRatingsMissingToken"/>
+  </testsuite>
+  <testsuite name="RATINGS | GET Ratings | Invalid token" id="98c17fc0-134f-4570-96ae-f72a70dbb383" timestamp="2026-05-16T05:03:30.638Z" tests="2" failures="0" errors="0" time="0.865">
+    <testcase name="Invalid token rejected" time="0.865" classname="RatingsGetRatingsInvalidToken"/>
+    <testcase name="No server error" time="0.865" classname="RatingsGetRatingsInvalidToken"/>
+  </testsuite>
+  <testsuite name="RATINGS | GET Single Rating | Existing or saved id" id="b39a976b-7350-4c4c-a820-91ce3b11020c" timestamp="2026-05-16T05:03:30.638Z" tests="3" failures="0" errors="0" time="0.318">
+    <testcase name="Status acceptable" time="0.318" classname="RatingsGetSingleRatingExistingOrSavedId"/>
+    <testcase name="No server error" time="0.318" classname="RatingsGetSingleRatingExistingOrSavedId"/>
+    <testcase name="Response is JSON" time="0.318" classname="RatingsGetSingleRatingExistingOrSavedId"/>
+  </testsuite>
+  <testsuite name="RATINGS | GET Single Rating | Invalid UUID" id="78d1d3fe-2af5-40ac-a8c7-178d8edbc890" timestamp="2026-05-16T05:03:30.638Z" tests="2" failures="0" errors="0" time="0.333">
+    <testcase name="Invalid UUID handled safely" time="0.333" classname="RatingsGetSingleRatingInvalidUuid"/>
+    <testcase name="No server error" time="0.333" classname="RatingsGetSingleRatingInvalidUuid"/>
+  </testsuite>
+  <testsuite name="RATINGS | GET Single Rating | Malformed UUID" id="dd7a7e3c-16dd-41c7-8715-414d3928166a" timestamp="2026-05-16T05:03:30.638Z" tests="2" failures="0" errors="0" time="0.304">
+    <testcase name="Malformed UUID handled safely" time="0.304" classname="RatingsGetSingleRatingMalformedUuid"/>
+    <testcase name="No server error" time="0.304" classname="RatingsGetSingleRatingMalformedUuid"/>
+  </testsuite>
+  <testsuite name="RATINGS | GET Ratings | Invalid pagination" id="b1dc83a2-4a56-4d4a-988b-9ce9db2029c3" timestamp="2026-05-16T05:03:30.638Z" tests="2" failures="0" errors="0" time="0.976">
+    <testcase name="Invalid pagination handled safely" time="0.976" classname="RatingsGetRatingsInvalidPagination"/>
+    <testcase name="No server error" time="0.976" classname="RatingsGetRatingsInvalidPagination"/>
+  </testsuite>
+  <testsuite name="RATINGS | GET Ratings | SQL injection search" id="44c29deb-cc47-4e44-be7e-9f3bb160e387" timestamp="2026-05-16T05:03:30.638Z" tests="2" failures="0" errors="0" time="0.314">
+    <testcase name="SQL injection handled safely" time="0.314" classname="RatingsGetRatingsSqlInjectionSearch"/>
+    <testcase name="Response is not server error" time="0.314" classname="RatingsGetRatingsSqlInjectionSearch"/>
+  </testsuite>
+  <testsuite name="RATINGS | GET Ratings | XSS search" id="772ff357-913b-4ee0-a7c1-595de5920858" timestamp="2026-05-16T05:03:30.638Z" tests="2" failures="0" errors="0" time="0.309">
+    <testcase name="XSS handled safely" time="0.309" classname="RatingsGetRatingsXssSearch"/>
+    <testcase name="Response body does not echo script unsafely" time="0.309" classname="RatingsGetRatingsXssSearch"/>
+  </testsuite>
+  <testsuite name="RATINGS | POST Create Rating | Empty payload validation" id="7e3ed03f-f592-4ac5-b525-dbdbe3691525" timestamp="2026-05-16T05:03:30.638Z" tests="3" failures="0" errors="0" time="0.295">
+    <testcase name="Validation or auth status acceptable" time="0.295" classname="RatingsPostCreateRatingEmptyPayloadValidation"/>
+    <testcase name="No server error" time="0.295" classname="RatingsPostCreateRatingEmptyPayloadValidation"/>
+    <testcase name="Validation response success false" time="0.295" classname="RatingsPostCreateRatingEmptyPayloadValidation"/>
+  </testsuite>
+</testsuites>

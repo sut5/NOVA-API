@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Novas Auth Regression Suite" tests="17" time="10.493">
+  <testsuite name="AUTH | POST Login | Valid credentials" id="e1b5376b-216d-4ede-8896-3d9d8257216e" timestamp="2026-05-16T05:36:19.260Z" tests="4" failures="0" errors="0" time="1.230">
+    <testcase name="Status is 200" time="1.230" classname="AuthPostLoginValidCredentials"/>
+    <testcase name="Login success true" time="1.230" classname="AuthPostLoginValidCredentials"/>
+    <testcase name="Access token exists" time="1.230" classname="AuthPostLoginValidCredentials"/>
+    <testcase name="Refresh token exists" time="1.230" classname="AuthPostLoginValidCredentials"/>
+  </testsuite>
+  <testsuite name="AUTH | POST Login | Invalid phone" id="7ed51025-6e55-421a-8217-2789b224b9f1" timestamp="2026-05-16T05:36:19.260Z" tests="3" failures="0" errors="0" time="0.285">
+    <testcase name="Status is 403" time="0.285" classname="AuthPostLoginInvalidPhone"/>
+    <testcase name="Login rejected" time="0.285" classname="AuthPostLoginInvalidPhone"/>
+    <testcase name="Error message exists" time="0.285" classname="AuthPostLoginInvalidPhone"/>
+  </testsuite>
+  <testsuite name="AUTH | POST Login | Invalid password" id="53bdf292-1b36-4c1e-8d9d-f77b75d33615" timestamp="2026-05-16T05:36:19.260Z" tests="2" failures="0" errors="0" time="0.575">
+    <testcase name="Status is 403" time="0.575" classname="AuthPostLoginInvalidPassword"/>
+    <testcase name="Login rejected" time="0.575" classname="AuthPostLoginInvalidPassword"/>
+  </testsuite>
+  <testsuite name="AUTH | POST Login | Missing phone" id="fdc7e126-101c-43ab-9aeb-40988a1ab948" timestamp="2026-05-16T05:36:19.260Z" tests="3" failures="0" errors="0" time="0.291">
+    <testcase name="Status is 422" time="0.291" classname="AuthPostLoginMissingPhone"/>
+    <testcase name="Validation failed" time="0.291" classname="AuthPostLoginMissingPhone"/>
+    <testcase name="Phone validation exists" time="0.291" classname="AuthPostLoginMissingPhone"/>
+  </testsuite>
+  <testsuite name="AUTH | POST Login | Missing password" id="558b5c4f-9e83-4a41-bef6-19e940893ca8" timestamp="2026-05-16T05:36:19.260Z" tests="3" failures="0" errors="0" time="0.287">
+    <testcase name="Status is 422" time="0.287" classname="AuthPostLoginMissingPassword"/>
+    <testcase name="Validation failed" time="0.287" classname="AuthPostLoginMissingPassword"/>
+    <testcase name="Password validation exists" time="0.287" classname="AuthPostLoginMissingPassword"/>
+  </testsuite>
+  <testsuite name="AUTH | POST Login | Empty body" id="3e4df41d-22a7-4914-b3ba-a14d4be5c288" timestamp="2026-05-16T05:36:19.260Z" tests="2" failures="0" errors="0" time="0.354">
+    <testcase name="Status is 422" time="0.354" classname="AuthPostLoginEmptyBody"/>
+    <testcase name="Validation failed" time="0.354" classname="AuthPostLoginEmptyBody"/>
+  </testsuite>
+  <testsuite name="AUTH | GET Profile | Valid token" id="a9a2ae27-cee1-4937-aaf3-51d51a6939ac" timestamp="2026-05-16T05:36:19.260Z" tests="3" failures="0" errors="0" time="0.347">
+    <testcase name="Status is 200" time="0.347" classname="AuthGetProfileValidToken"/>
+    <testcase name="Profile returned" time="0.347" classname="AuthGetProfileValidToken"/>
+    <testcase name="User ID exists" time="0.347" classname="AuthGetProfileValidToken"/>
+  </testsuite>
+  <testsuite name="AUTH | GET Profile | Invalid token" id="fb82445e-f280-483d-b9a2-b5dab71f22b9" timestamp="2026-05-16T05:36:19.260Z" tests="1" failures="0" errors="0" time="1.364">
+    <testcase name="Status is 401 or 405" time="1.364" classname="AuthGetProfileInvalidToken"/>
+  </testsuite>
+  <testsuite name="AUTH | DELETE Logout | Valid token" id="440dfcc2-16e0-4e97-9ea2-0b821b9b0d4b" timestamp="2026-05-16T05:36:19.260Z" tests="2" failures="0" errors="0" time="0.305">
+    <testcase name="Status is 200" time="0.305" classname="AuthDeleteLogoutValidToken"/>
+    <testcase name="Logout successful" time="0.305" classname="AuthDeleteLogoutValidToken"/>
+  </testsuite>
+  <testsuite name="AUTH | GET Profile | After logout" id="738303ea-630f-4231-b271-45416f4c8a2e" timestamp="2026-05-16T05:36:19.260Z" tests="1" failures="0" errors="0" time="0.874">
+    <testcase name="Status is 401 or 405 after logout" time="0.874" classname="AuthGetProfileAfterLogout"/>
+  </testsuite>
+  <testsuite name="AUTH | GET Profile | Missing token" id="fc280ebb-3f72-490a-a318-7602e48c3d0d" timestamp="2026-05-16T05:36:19.260Z" tests="1" failures="0" errors="0" time="0.858">
+    <testcase name="Status is 401 or 405" time="0.858" classname="AuthGetProfileMissingToken"/>
+  </testsuite>
+  <testsuite name="AUTH | GET Profile | Empty Bearer token" id="cf46c6c7-8d51-46c1-8874-d8b4c46177c7" timestamp="2026-05-16T05:36:19.260Z" tests="1" failures="0" errors="0" time="0.852">
+    <testcase name="Status is 401 or 405" time="0.852" classname="AuthGetProfileEmptyBearerToken"/>
+  </testsuite>
+  <testsuite name="AUTH | POST Login | SQL injection phone" id="7c04c6d9-c808-4f6c-b412-26318d54f4de" timestamp="2026-05-16T05:36:19.260Z" tests="2" failures="0" errors="0" time="0.287">
+    <testcase name="SQL injection is rejected" time="0.287" classname="AuthPostLoginSqlInjectionPhone"/>
+    <testcase name="Login not successful" time="0.287" classname="AuthPostLoginSqlInjectionPhone"/>
+  </testsuite>
+  <testsuite name="AUTH | POST Login | XSS payload phone" id="7cd3b57a-2c7c-4a45-886d-143fac323b2e" timestamp="2026-05-16T05:36:19.260Z" tests="2" failures="0" errors="0" time="0.284">
+    <testcase name="XSS payload is rejected" time="0.284" classname="AuthPostLoginXssPayloadPhone"/>
+    <testcase name="Login not successful" time="0.284" classname="AuthPostLoginXssPayloadPhone"/>
+  </testsuite>
+  <testsuite name="AUTH | POST Login | Very long password" id="5745a263-5383-4925-b471-05931c8d03b3" timestamp="2026-05-16T05:36:19.260Z" tests="2" failures="0" errors="0" time="0.582">
+    <testcase name="Very long password rejected safely" time="0.582" classname="AuthPostLoginVeryLongPassword"/>
+    <testcase name="No server error" time="0.582" classname="AuthPostLoginVeryLongPassword"/>
+  </testsuite>
+  <testsuite name="AUTH | DELETE Logout | Missing token" id="c55acf0c-8a63-4413-9b50-ecf2f596c209" timestamp="2026-05-16T05:36:19.260Z" tests="1" failures="0" errors="0" time="0.873">
+    <testcase name="Logout without token rejected" time="0.873" classname="AuthDeleteLogoutMissingToken"/>
+  </testsuite>
+  <testsuite name="AUTH | DELETE Logout | Double logout" id="98707e55-e12c-4a8a-b67b-bb59aabfa833" timestamp="2026-05-16T05:36:19.260Z" tests="1" failures="0" errors="0" time="0.845">
+    <testcase name="Double logout handled safely" time="0.845" classname="AuthDeleteLogoutDoubleLogout"/>
+  </testsuite>
+</testsuites>

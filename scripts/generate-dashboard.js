@@ -19,6 +19,35 @@ const reports = [
   { name: 'Security Report', file: 'security-report.html' }
 ];
 
+const reportFiles = reports.filter(r => fs.existsSync(path.join(__dirname, '../reports', r.file)));
+
+reportFiles.forEach(report => {
+  const reportPath = path.join(__dirname, '../reports', report.file);
+
+  let content = fs.readFileSync(reportPath, 'utf8');
+
+  if (!content.includes('Back to Dashboard')) {
+    const backButton = `
+      <div style="padding:20px;background:#0f172a;">
+        <a href="dashboard.html" style="
+          display:inline-block;
+          padding:10px 18px;
+          background:#38bdf8;
+          color:#0f172a;
+          text-decoration:none;
+          font-weight:bold;
+          border-radius:8px;
+          font-family:Arial,sans-serif;
+        ">← Back to Dashboard</a>
+      </div>
+    `;
+
+    content = content.replace(/<body[^>]*>/i, match => match + backButton);
+
+    fs.writeFileSync(reportPath, content, 'utf8');
+  }
+});
+
 const html = `
 <!DOCTYPE html>
 <html>
@@ -72,12 +101,15 @@ const html = `
   <h1>Novas API Automation Dashboard</h1>
 
   <div class="grid">
-    ${reports.map(r => `
+    ${reports.map(r => {
+      const exists = fs.existsSync(path.join(__dirname, '../reports', r.file));
+      return `
       <div class="card">
         <a href="./${r.file}" target="_blank">${r.name}</a>
-        <p>Open detailed regression execution report.</p>
+        <p>${exists ? 'Open detailed regression execution report.' : 'Report not yet generated.'}</p>
       </div>
-    `).join('')}
+      `;
+    }).join('')}
   </div>
 </body>
 </html>

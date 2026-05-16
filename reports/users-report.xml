@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Novas Users Regression Suite" tests="12" time="6.158">
+  <testsuite name="USERS | Login | Setup token" id="8977e83f-85ec-4574-b1a0-b14bd0942c7c" timestamp="2026-05-16T05:09:09.899Z" tests="2" failures="0" errors="0" time="1.179">
+    <testcase name="Login status is 200" time="1.179" classname="UsersLoginSetupToken"/>
+    <testcase name="Token exists" time="1.179" classname="UsersLoginSetupToken"/>
+  </testsuite>
+  <testsuite name="USERS | GET Users | Valid token" id="2ea19226-2456-4491-87fe-6f3d4ab99b1f" timestamp="2026-05-16T05:09:09.899Z" tests="4" failures="0" errors="0" time="0.298">
+    <testcase name="Status acceptable" time="0.298" classname="UsersGetUsersValidToken"/>
+    <testcase name="No server error" time="0.298" classname="UsersGetUsersValidToken"/>
+    <testcase name="Users response has data" time="0.298" classname="UsersGetUsersValidToken"/>
+    <testcase name="Response time acceptable" time="0.298" classname="UsersGetUsersValidToken"/>
+  </testsuite>
+  <testsuite name="USERS | GET Customers | Valid token" id="18f7fc2f-ba5e-4364-9ce0-42ff497e077a" timestamp="2026-05-16T05:09:09.899Z" tests="2" failures="0" errors="0" time="0.288">
+    <testcase name="Status acceptable" time="0.288" classname="UsersGetCustomersValidToken"/>
+    <testcase name="No server error" time="0.288" classname="UsersGetCustomersValidToken"/>
+  </testsuite>
+  <testsuite name="USERS | GET Users | Missing token" id="b4ad8e49-f834-41f2-8d97-84e7a0b3de16" timestamp="2026-05-16T05:09:09.899Z" tests="2" failures="0" errors="0" time="1.132">
+    <testcase name="Missing token rejected" time="1.132" classname="UsersGetUsersMissingToken"/>
+    <testcase name="No server error" time="1.132" classname="UsersGetUsersMissingToken"/>
+  </testsuite>
+  <testsuite name="USERS | GET Users | Invalid token" id="9415ba45-6dd4-432f-a6d6-f3879c663582" timestamp="2026-05-16T05:09:09.899Z" tests="2" failures="0" errors="0" time="0.852">
+    <testcase name="Invalid token rejected" time="0.852" classname="UsersGetUsersInvalidToken"/>
+    <testcase name="No server error" time="0.852" classname="UsersGetUsersInvalidToken"/>
+  </testsuite>
+  <testsuite name="USERS | GET Single User | Existing or saved id" id="fa4d7682-ccc9-4df5-b3f8-df268eec18b0" timestamp="2026-05-16T05:09:09.899Z" tests="3" failures="0" errors="0" time="0.297">
+    <testcase name="Status acceptable" time="0.297" classname="UsersGetSingleUserExistingOrSavedId"/>
+    <testcase name="No server error" time="0.297" classname="UsersGetSingleUserExistingOrSavedId"/>
+    <testcase name="Response is JSON" time="0.297" classname="UsersGetSingleUserExistingOrSavedId"/>
+  </testsuite>
+  <testsuite name="USERS | GET Single User | Invalid UUID" id="6111aaf8-b7c1-4ed2-b195-6b028f0b8f5a" timestamp="2026-05-16T05:09:09.899Z" tests="2" failures="0" errors="0" time="0.295">
+    <testcase name="Invalid UUID handled safely" time="0.295" classname="UsersGetSingleUserInvalidUuid"/>
+    <testcase name="No server error" time="0.295" classname="UsersGetSingleUserInvalidUuid"/>
+  </testsuite>
+  <testsuite name="USERS | GET Single User | Malformed UUID" id="b271461a-b1f7-4c21-9c57-a285435b2280" timestamp="2026-05-16T05:09:09.899Z" tests="2" failures="0" errors="0" time="0.284">
+    <testcase name="Malformed UUID handled safely" time="0.284" classname="UsersGetSingleUserMalformedUuid"/>
+    <testcase name="No server error" time="0.284" classname="UsersGetSingleUserMalformedUuid"/>
+  </testsuite>
+  <testsuite name="USERS | GET Users | Invalid pagination" id="1e45c84e-e05a-4d3b-bf60-e647dd915649" timestamp="2026-05-16T05:09:09.899Z" tests="2" failures="0" errors="0" time="0.317">
+    <testcase name="Invalid pagination handled safely" time="0.317" classname="UsersGetUsersInvalidPagination"/>
+    <testcase name="No server error" time="0.317" classname="UsersGetUsersInvalidPagination"/>
+  </testsuite>
+  <testsuite name="USERS | GET Users | SQL injection search" id="7a7026bf-517e-4b91-915d-520dacdf554d" timestamp="2026-05-16T05:09:09.899Z" tests="2" failures="0" errors="0" time="0.433">
+    <testcase name="SQL injection handled safely" time="0.433" classname="UsersGetUsersSqlInjectionSearch"/>
+    <testcase name="Response is not server error" time="0.433" classname="UsersGetUsersSqlInjectionSearch"/>
+  </testsuite>
+  <testsuite name="USERS | GET Users | XSS search" id="0d6a8e9b-439c-423a-902f-e6183ff1e920" timestamp="2026-05-16T05:09:09.899Z" tests="2" failures="0" errors="0" time="0.441">
+    <testcase name="XSS handled safely" time="0.441" classname="UsersGetUsersXssSearch"/>
+    <testcase name="Response body does not echo script unsafely" time="0.441" classname="UsersGetUsersXssSearch"/>
+  </testsuite>
+  <testsuite name="USERS | POST Create User | Empty payload validation" id="2f9ebc44-5745-4b2a-970d-995f4c15b99a" timestamp="2026-05-16T05:09:09.899Z" tests="3" failures="0" errors="0" time="0.342">
+    <testcase name="Validation or auth status acceptable" time="0.342" classname="UsersPostCreateUserEmptyPayloadValidation"/>
+    <testcase name="No server error" time="0.342" classname="UsersPostCreateUserEmptyPayloadValidation"/>
+    <testcase name="Validation response success false" time="0.342" classname="UsersPostCreateUserEmptyPayloadValidation"/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Novas Payments Regression Suite" tests="11" time="6.055">
+  <testsuite name="PAYMENTS | Login | Setup token" id="e5c93ea0-697c-48c5-9d62-9dfa9fd4431b" timestamp="2026-05-16T05:30:45.242Z" tests="2" failures="0" errors="0" time="1.216">
+    <testcase name="Login status is 200" time="1.216" classname="PaymentsLoginSetupToken"/>
+    <testcase name="Token exists" time="1.216" classname="PaymentsLoginSetupToken"/>
+  </testsuite>
+  <testsuite name="PAYMENTS | GET Payments | Valid token" id="9570a2ab-0213-4af7-be49-5c49d69f869f" timestamp="2026-05-16T05:30:45.242Z" tests="4" failures="0" errors="0" time="0.348">
+    <testcase name="Status acceptable" time="0.348" classname="PaymentsGetPaymentsValidToken"/>
+    <testcase name="No server error" time="0.348" classname="PaymentsGetPaymentsValidToken"/>
+    <testcase name="Payments response has data" time="0.348" classname="PaymentsGetPaymentsValidToken"/>
+    <testcase name="Response time acceptable" time="0.348" classname="PaymentsGetPaymentsValidToken"/>
+  </testsuite>
+  <testsuite name="PAYMENTS | GET Payments | Missing token" id="0b397d3b-8126-47bb-8889-1526ad92c0d6" timestamp="2026-05-16T05:30:45.242Z" tests="2" failures="0" errors="0" time="1.128">
+    <testcase name="Missing token rejected" time="1.128" classname="PaymentsGetPaymentsMissingToken"/>
+    <testcase name="No server error" time="1.128" classname="PaymentsGetPaymentsMissingToken"/>
+  </testsuite>
+  <testsuite name="PAYMENTS | GET Payments | Invalid token" id="a16bac5b-1695-436c-b3d7-98a39bf5b976" timestamp="2026-05-16T05:30:45.242Z" tests="2" failures="0" errors="0" time="0.876">
+    <testcase name="Invalid token rejected" time="0.876" classname="PaymentsGetPaymentsInvalidToken"/>
+    <testcase name="No server error" time="0.876" classname="PaymentsGetPaymentsInvalidToken"/>
+  </testsuite>
+  <testsuite name="PAYMENTS | GET Single Payment | Existing or saved id" id="262a80fb-21fb-42c2-877a-cddf3f00c28d" timestamp="2026-05-16T05:30:45.242Z" tests="3" failures="0" errors="0" time="0.311">
+    <testcase name="Status acceptable" time="0.311" classname="PaymentsGetSinglePaymentExistingOrSavedId"/>
+    <testcase name="No server error" time="0.311" classname="PaymentsGetSinglePaymentExistingOrSavedId"/>
+    <testcase name="Response is JSON" time="0.311" classname="PaymentsGetSinglePaymentExistingOrSavedId"/>
+  </testsuite>
+  <testsuite name="PAYMENTS | GET Single Payment | Invalid UUID" id="1c650d40-11d1-4994-b485-4606c505634c" timestamp="2026-05-16T05:30:45.242Z" tests="2" failures="0" errors="0" time="0.286">
+    <testcase name="Invalid UUID handled safely" time="0.286" classname="PaymentsGetSinglePaymentInvalidUuid"/>
+    <testcase name="No server error" time="0.286" classname="PaymentsGetSinglePaymentInvalidUuid"/>
+  </testsuite>
+  <testsuite name="PAYMENTS | GET Single Payment | Malformed UUID" id="6363bfc7-add1-4412-b2d9-368c48268449" timestamp="2026-05-16T05:30:45.242Z" tests="2" failures="0" errors="0" time="0.291">
+    <testcase name="Malformed UUID handled safely" time="0.291" classname="PaymentsGetSinglePaymentMalformedUuid"/>
+    <testcase name="No server error" time="0.291" classname="PaymentsGetSinglePaymentMalformedUuid"/>
+  </testsuite>
+  <testsuite name="PAYMENTS | GET Payments | Invalid pagination" id="82bbfc6c-8b81-4e1f-8e86-230a8f59cc74" timestamp="2026-05-16T05:30:45.242Z" tests="2" failures="0" errors="0" time="0.708">
+    <testcase name="Invalid pagination handled safely" time="0.708" classname="PaymentsGetPaymentsInvalidPagination"/>
+    <testcase name="No server error" time="0.708" classname="PaymentsGetPaymentsInvalidPagination"/>
+  </testsuite>
+  <testsuite name="PAYMENTS | GET Payments | SQL injection search" id="446647c9-5d01-4e37-8673-33924b47b7fe" timestamp="2026-05-16T05:30:45.242Z" tests="2" failures="0" errors="0" time="0.297">
+    <testcase name="SQL injection handled safely" time="0.297" classname="PaymentsGetPaymentsSqlInjectionSearch"/>
+    <testcase name="Response is not server error" time="0.297" classname="PaymentsGetPaymentsSqlInjectionSearch"/>
+  </testsuite>
+  <testsuite name="PAYMENTS | GET Payments | XSS search" id="8fe6f44e-4a4e-4f02-a587-4ee3ae751635" timestamp="2026-05-16T05:30:45.242Z" tests="2" failures="0" errors="0" time="0.296">
+    <testcase name="XSS handled safely" time="0.296" classname="PaymentsGetPaymentsXssSearch"/>
+    <testcase name="Response body does not echo script unsafely" time="0.296" classname="PaymentsGetPaymentsXssSearch"/>
+  </testsuite>
+  <testsuite name="PAYMENTS | POST Create Payment | Empty payload validation" id="19f49257-fe9a-438d-a31c-8ed077c3a1de" timestamp="2026-05-16T05:30:45.242Z" tests="2" failures="0" errors="0" time="0.298">
+    <testcase name="Validation or auth status acceptable" time="0.298" classname="PaymentsPostCreatePaymentEmptyPayloadValidation"/>
+    <testcase name="No server error" time="0.298" classname="PaymentsPostCreatePaymentEmptyPayloadValidation"/>
+  </testsuite>
+</testsuites>

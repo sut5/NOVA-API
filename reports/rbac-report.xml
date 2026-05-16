@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Novas Roles Permissions Regression Suite" tests="13" time="6.422">
+  <testsuite name="RBAC | Login | Setup token" id="b03154ff-ac3d-48fb-879c-76e745ff7dc1" timestamp="2026-05-16T05:15:36.447Z" tests="2" failures="0" errors="0" time="1.199">
+    <testcase name="Login status is 200" time="1.199" classname="RbacLoginSetupToken"/>
+    <testcase name="Token exists" time="1.199" classname="RbacLoginSetupToken"/>
+  </testsuite>
+  <testsuite name="RBAC | GET Roles | Valid token" id="e00f1bfe-df4f-40a2-9b72-71bef17cb120" timestamp="2026-05-16T05:15:36.447Z" tests="4" failures="0" errors="0" time="0.442">
+    <testcase name="Status acceptable" time="0.442" classname="RbacGetRolesValidToken"/>
+    <testcase name="No server error" time="0.442" classname="RbacGetRolesValidToken"/>
+    <testcase name="Roles response has data" time="0.442" classname="RbacGetRolesValidToken"/>
+    <testcase name="Response time acceptable" time="0.442" classname="RbacGetRolesValidToken"/>
+  </testsuite>
+  <testsuite name="RBAC | GET Permissions | Valid token" id="7cb54b56-f031-4e94-9b86-755247887ce3" timestamp="2026-05-16T05:15:36.447Z" tests="3" failures="0" errors="0" time="0.309">
+    <testcase name="Status acceptable" time="0.309" classname="RbacGetPermissionsValidToken"/>
+    <testcase name="No server error" time="0.309" classname="RbacGetPermissionsValidToken"/>
+    <testcase name="Permissions response has data" time="0.309" classname="RbacGetPermissionsValidToken"/>
+  </testsuite>
+  <testsuite name="RBAC | GET Roles | Missing token" id="c0478041-43cd-4e86-b67c-d025a0369918" timestamp="2026-05-16T05:15:36.447Z" tests="2" failures="0" errors="0" time="1.164">
+    <testcase name="Missing token rejected" time="1.164" classname="RbacGetRolesMissingToken"/>
+    <testcase name="No server error" time="1.164" classname="RbacGetRolesMissingToken"/>
+  </testsuite>
+  <testsuite name="RBAC | GET Roles | Invalid token" id="b17d8fca-e75f-4985-b43f-bc5966b52d51" timestamp="2026-05-16T05:15:36.447Z" tests="2" failures="0" errors="0" time="0.883">
+    <testcase name="Invalid token rejected" time="0.883" classname="RbacGetRolesInvalidToken"/>
+    <testcase name="No server error" time="0.883" classname="RbacGetRolesInvalidToken"/>
+  </testsuite>
+  <testsuite name="RBAC | GET Single Role | Existing or saved id" id="e6be0602-9b95-4f72-9473-8e51571f51be" timestamp="2026-05-16T05:15:36.447Z" tests="3" failures="0" errors="0" time="0.305">
+    <testcase name="Status acceptable" time="0.305" classname="RbacGetSingleRoleExistingOrSavedId"/>
+    <testcase name="No server error" time="0.305" classname="RbacGetSingleRoleExistingOrSavedId"/>
+    <testcase name="Response is JSON" time="0.305" classname="RbacGetSingleRoleExistingOrSavedId"/>
+  </testsuite>
+  <testsuite name="RBAC | GET Single Permission | Existing or saved id" id="629b07bc-fe77-4194-86f9-774ca02dfe27" timestamp="2026-05-16T05:15:36.447Z" tests="3" failures="0" errors="0" time="0.300">
+    <testcase name="Status acceptable" time="0.300" classname="RbacGetSinglePermissionExistingOrSavedId"/>
+    <testcase name="No server error" time="0.300" classname="RbacGetSinglePermissionExistingOrSavedId"/>
+    <testcase name="Response is JSON" time="0.300" classname="RbacGetSinglePermissionExistingOrSavedId"/>
+  </testsuite>
+  <testsuite name="RBAC | GET Single Role | Invalid UUID" id="948640f4-3ca1-4714-a872-3196b066b7e2" timestamp="2026-05-16T05:15:36.447Z" tests="2" failures="0" errors="0" time="0.295">
+    <testcase name="Invalid UUID handled safely" time="0.295" classname="RbacGetSingleRoleInvalidUuid"/>
+    <testcase name="No server error" time="0.295" classname="RbacGetSingleRoleInvalidUuid"/>
+  </testsuite>
+  <testsuite name="RBAC | GET Single Role | Malformed UUID" id="38e55eb2-8402-4d96-80c0-2cf876c17029" timestamp="2026-05-16T05:15:36.447Z" tests="2" failures="0" errors="0" time="0.295">
+    <testcase name="Malformed UUID handled safely" time="0.295" classname="RbacGetSingleRoleMalformedUuid"/>
+    <testcase name="No server error" time="0.295" classname="RbacGetSingleRoleMalformedUuid"/>
+  </testsuite>
+  <testsuite name="RBAC | GET Roles | Invalid pagination" id="db6bf87a-7eaf-4487-a633-5338e91a65e3" timestamp="2026-05-16T05:15:36.447Z" tests="2" failures="0" errors="0" time="0.307">
+    <testcase name="Invalid pagination handled safely" time="0.307" classname="RbacGetRolesInvalidPagination"/>
+    <testcase name="No server error" time="0.307" classname="RbacGetRolesInvalidPagination"/>
+  </testsuite>
+  <testsuite name="RBAC | GET Roles | SQL injection search" id="ce6afeb9-0ed1-40cf-8cbe-14271449f892" timestamp="2026-05-16T05:15:36.447Z" tests="2" failures="0" errors="0" time="0.311">
+    <testcase name="SQL injection handled safely" time="0.311" classname="RbacGetRolesSqlInjectionSearch"/>
+    <testcase name="Response is not server error" time="0.311" classname="RbacGetRolesSqlInjectionSearch"/>
+  </testsuite>
+  <testsuite name="RBAC | GET Roles | XSS search" id="d598f450-5f0d-417b-9aec-c38ac4bd37e4" timestamp="2026-05-16T05:15:36.447Z" tests="2" failures="0" errors="0" time="0.315">
+    <testcase name="XSS handled safely" time="0.315" classname="RbacGetRolesXssSearch"/>
+    <testcase name="Response body does not echo script unsafely" time="0.315" classname="RbacGetRolesXssSearch"/>
+  </testsuite>
+  <testsuite name="RBAC | POST Create Role | Empty payload validation" id="570e5284-fcee-49ee-a207-1004797566fb" timestamp="2026-05-16T05:15:36.447Z" tests="3" failures="0" errors="0" time="0.297">
+    <testcase name="Validation or auth status acceptable" time="0.297" classname="RbacPostCreateRoleEmptyPayloadValidation"/>
+    <testcase name="No server error" time="0.297" classname="RbacPostCreateRoleEmptyPayloadValidation"/>
+    <testcase name="Validation response success false" time="0.297" classname="RbacPostCreateRoleEmptyPayloadValidation"/>
+  </testsuite>
+</testsuites>

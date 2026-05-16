@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Novas Room Type Regression Suite" tests="10" time="6.655">
+  <testsuite name="ROOM TYPE | Login | Setup token" id="dd3db2a3-81e9-4d1e-9cd1-af62677ba03e" timestamp="2026-05-16T05:36:55.227Z" tests="2" failures="0" errors="0" time="0.659">
+    <testcase name="Login status is 200" time="0.659" classname="RoomTypeLoginSetupToken"/>
+    <testcase name="Token exists" time="0.659" classname="RoomTypeLoginSetupToken"/>
+  </testsuite>
+  <testsuite name="ROOM TYPE | GET Room Types | Valid token" id="569dd4fe-add4-4b9f-90fe-e2eb3a11d7ea" timestamp="2026-05-16T05:36:55.227Z" tests="3" failures="0" errors="0" time="0.398">
+    <testcase name="Status acceptable" time="0.398" classname="RoomTypeGetRoomTypesValidToken"/>
+    <testcase name="No server error" time="0.398" classname="RoomTypeGetRoomTypesValidToken"/>
+    <testcase name="Response time acceptable" time="0.398" classname="RoomTypeGetRoomTypesValidToken"/>
+  </testsuite>
+  <testsuite name="ROOM TYPE | GET Room Types | Missing token" id="e726aa7d-16f5-4208-beda-4331e6ea7334" timestamp="2026-05-16T05:36:55.227Z" tests="2" failures="0" errors="0" time="0.906">
+    <testcase name="Unauthorized request rejected" time="0.906" classname="RoomTypeGetRoomTypesMissingToken"/>
+    <testcase name="No server error" time="0.906" classname="RoomTypeGetRoomTypesMissingToken"/>
+  </testsuite>
+  <testsuite name="ROOM TYPE | GET Room Types | Invalid token" id="50bb085b-3c81-43b7-bcc0-d1e14dbbc37d" timestamp="2026-05-16T05:36:55.227Z" tests="2" failures="0" errors="0" time="1.059">
+    <testcase name="Invalid token rejected" time="1.059" classname="RoomTypeGetRoomTypesInvalidToken"/>
+    <testcase name="No server error" time="1.059" classname="RoomTypeGetRoomTypesInvalidToken"/>
+  </testsuite>
+  <testsuite name="ROOM TYPE | GET Single Room Type | Existing id" id="111cf3cc-70f7-4f8e-a275-f3583df133d0" timestamp="2026-05-16T05:36:55.227Z" tests="2" failures="0" errors="0" time="0.336">
+    <testcase name="Status acceptable" time="0.336" classname="RoomTypeGetSingleRoomTypeExistingId"/>
+    <testcase name="No server error" time="0.336" classname="RoomTypeGetSingleRoomTypeExistingId"/>
+  </testsuite>
+  <testsuite name="ROOM TYPE | GET Single Room Type | Invalid UUID" id="27e13679-c74d-4d9c-ad56-24cd14b99900" timestamp="2026-05-16T05:36:55.227Z" tests="2" failures="0" errors="0" time="0.298">
+    <testcase name="Invalid UUID handled safely" time="0.298" classname="RoomTypeGetSingleRoomTypeInvalidUuid"/>
+    <testcase name="No server error" time="0.298" classname="RoomTypeGetSingleRoomTypeInvalidUuid"/>
+  </testsuite>
+  <testsuite name="ROOM TYPE | GET Single Room Type | Malformed UUID" id="c3692a54-50a4-4dc8-b9cd-01efc52895e6" timestamp="2026-05-16T05:36:55.227Z" tests="2" failures="0" errors="0" time="0.314">
+    <testcase name="Malformed UUID handled safely" time="0.314" classname="RoomTypeGetSingleRoomTypeMalformedUuid"/>
+    <testcase name="No server error" time="0.314" classname="RoomTypeGetSingleRoomTypeMalformedUuid"/>
+  </testsuite>
+  <testsuite name="ROOM TYPE | GET Room Types | SQL Injection" id="d3de4b3f-17f7-406d-aa79-f76ea1103dfd" timestamp="2026-05-16T05:36:55.227Z" tests="1" failures="0" errors="0" time="0.302">
+    <testcase name="SQL injection handled safely" time="0.302" classname="RoomTypeGetRoomTypesSqlInjection"/>
+  </testsuite>
+  <testsuite name="ROOM TYPE | GET Room Types | XSS" id="41b232ab-526d-48ab-ab1d-bb8895834dcd" timestamp="2026-05-16T05:36:55.227Z" tests="2" failures="0" errors="0" time="2.065">
+    <testcase name="XSS handled safely" time="2.065" classname="RoomTypeGetRoomTypesXss"/>
+    <testcase name="No reflected script" time="2.065" classname="RoomTypeGetRoomTypesXss"/>
+  </testsuite>
+  <testsuite name="ROOM TYPE | POST Create Room Type | Empty payload" id="76810410-f344-48e8-a703-02d304573e60" timestamp="2026-05-16T05:36:55.227Z" tests="2" failures="0" errors="0" time="0.318">
+    <testcase name="Validation handled safely" time="0.318" classname="RoomTypePostCreateRoomTypeEmptyPayload"/>
+    <testcase name="No server error" time="0.318" classname="RoomTypePostCreateRoomTypeEmptyPayload"/>
+  </testsuite>
+</testsuites>

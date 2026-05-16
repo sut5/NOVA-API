@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Novas Booking Regression Suite" tests="12" time="6.234">
+  <testsuite name="BOOKING | Login | Setup token" id="954045cb-c3bf-45d4-a520-37c5aca97d39" timestamp="2026-05-16T04:18:25.528Z" tests="2" failures="0" errors="0" time="1.258">
+    <testcase name="Login status is 200" time="1.258" classname="BookingLoginSetupToken"/>
+    <testcase name="Token exists" time="1.258" classname="BookingLoginSetupToken"/>
+  </testsuite>
+  <testsuite name="BOOKING | GET Bookings | Valid token" id="054e66e4-7ad7-4700-b8a9-4fc249df6b8c" timestamp="2026-05-16T04:18:25.528Z" tests="4" failures="0" errors="0" time="0.322">
+    <testcase name="Status is 200 or 403" time="0.322" classname="BookingGetBookingsValidToken"/>
+    <testcase name="No server error" time="0.322" classname="BookingGetBookingsValidToken"/>
+    <testcase name="Bookings response has data" time="0.322" classname="BookingGetBookingsValidToken"/>
+    <testcase name="Response time acceptable" time="0.322" classname="BookingGetBookingsValidToken"/>
+  </testsuite>
+  <testsuite name="BOOKING | GET Bookings | Missing token" id="0aedaa74-e9fe-42cc-8178-6b40cbf4c05d" timestamp="2026-05-16T04:18:25.528Z" tests="2" failures="0" errors="0" time="1.158">
+    <testcase name="Missing token rejected" time="1.158" classname="BookingGetBookingsMissingToken"/>
+    <testcase name="No server error" time="1.158" classname="BookingGetBookingsMissingToken"/>
+  </testsuite>
+  <testsuite name="BOOKING | GET Bookings | Invalid token" id="4943150e-6619-43dd-958c-90780ed3606d" timestamp="2026-05-16T04:18:25.528Z" tests="2" failures="0" errors="0" time="0.870">
+    <testcase name="Invalid token rejected" time="0.870" classname="BookingGetBookingsInvalidToken"/>
+    <testcase name="No server error" time="0.870" classname="BookingGetBookingsInvalidToken"/>
+  </testsuite>
+  <testsuite name="BOOKING | GET Single Booking | Existing or saved id" id="b72fefba-6ec3-455e-8bc8-e7dd290b3f8e" timestamp="2026-05-16T04:18:25.528Z" tests="3" failures="0" errors="0" time="0.312">
+    <testcase name="Status is acceptable" time="0.312" classname="BookingGetSingleBookingExistingOrSavedId"/>
+    <testcase name="No server error" time="0.312" classname="BookingGetSingleBookingExistingOrSavedId"/>
+    <testcase name="Response is JSON" time="0.312" classname="BookingGetSingleBookingExistingOrSavedId"/>
+  </testsuite>
+  <testsuite name="BOOKING | GET Single Booking | Invalid UUID" id="cec3945b-5494-48e3-9143-04a995a30bee" timestamp="2026-05-16T04:18:25.528Z" tests="2" failures="0" errors="0" time="0.312">
+    <testcase name="Invalid UUID handled safely" time="0.312" classname="BookingGetSingleBookingInvalidUuid"/>
+    <testcase name="No server error" time="0.312" classname="BookingGetSingleBookingInvalidUuid"/>
+  </testsuite>
+  <testsuite name="BOOKING | GET Single Booking | Malformed UUID" id="6031b103-fec0-4cf1-9eb2-971a3be1887a" timestamp="2026-05-16T04:18:25.528Z" tests="2" failures="0" errors="0" time="0.297">
+    <testcase name="Malformed UUID handled safely" time="0.297" classname="BookingGetSingleBookingMalformedUuid"/>
+    <testcase name="No server error" time="0.297" classname="BookingGetSingleBookingMalformedUuid"/>
+  </testsuite>
+  <testsuite name="BOOKING | GET Calendar | Valid month/year" id="72629b3d-d709-4539-86e7-f7124378ebb0" timestamp="2026-05-16T04:18:25.528Z" tests="2" failures="0" errors="0" time="0.302">
+    <testcase name="Calendar status acceptable" time="0.302" classname="BookingGetCalendarValidMonthYear"/>
+    <testcase name="No server error" time="0.302" classname="BookingGetCalendarValidMonthYear"/>
+  </testsuite>
+  <testsuite name="BOOKING | GET Calendar | Invalid month" id="c1fb4ae2-167b-4089-849a-2396b62a697d" timestamp="2026-05-16T04:18:25.528Z" tests="2" failures="0" errors="0" time="0.338">
+    <testcase name="Invalid month handled safely" time="0.338" classname="BookingGetCalendarInvalidMonth"/>
+    <testcase name="No server error" time="0.338" classname="BookingGetCalendarInvalidMonth"/>
+  </testsuite>
+  <testsuite name="BOOKING | GET Bookings | SQL injection filter" id="c0d86768-2e8e-4736-b9fb-e21604ba2294" timestamp="2026-05-16T04:18:25.528Z" tests="2" failures="0" errors="0" time="0.382">
+    <testcase name="SQL injection handled safely" time="0.382" classname="BookingGetBookingsSqlInjectionFilter"/>
+    <testcase name="Response is not server error" time="0.382" classname="BookingGetBookingsSqlInjectionFilter"/>
+  </testsuite>
+  <testsuite name="BOOKING | GET Bookings | XSS filter" id="e8e9ab00-9d77-4171-92c8-6ebe01fff5e0" timestamp="2026-05-16T04:18:25.528Z" tests="2" failures="0" errors="0" time="0.357">
+    <testcase name="XSS handled safely" time="0.357" classname="BookingGetBookingsXssFilter"/>
+    <testcase name="Response body does not echo script unsafely" time="0.357" classname="BookingGetBookingsXssFilter"/>
+  </testsuite>
+  <testsuite name="BOOKING | POST Create Booking | Empty payload validation" id="d62fb6fb-2fc4-4ded-9ef4-1b9b614a7eec" timestamp="2026-05-16T04:18:25.528Z" tests="3" failures="0" errors="0" time="0.326">
+    <testcase name="Validation or auth status acceptable" time="0.326" classname="BookingPostCreateBookingEmptyPayloadValidation"/>
+    <testcase name="No server error" time="0.326" classname="BookingPostCreateBookingEmptyPayloadValidation"/>
+    <testcase name="Validation response success false" time="0.326" classname="BookingPostCreateBookingEmptyPayloadValidation"/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Novas Branch Regression Suite" tests="11" time="5.414">
+  <testsuite name="BRANCH | Login | Setup token" id="226d6475-74c3-45bc-8bd0-bb3ea1a1da1e" timestamp="2026-05-16T05:36:41.671Z" tests="2" failures="0" errors="0" time="0.656">
+    <testcase name="Login status is 200 or 403" time="0.656" classname="BranchLoginSetupToken"/>
+    <testcase name="Token exists" time="0.656" classname="BranchLoginSetupToken"/>
+  </testsuite>
+  <testsuite name="BRANCH | GET Branches | Valid token" id="1c2711b0-5f0e-463c-9f38-e818c2fca6d8" timestamp="2026-05-16T05:36:41.671Z" tests="4" failures="0" errors="0" time="0.359">
+    <testcase name="Status is 200 or 405" time="0.359" classname="BranchGetBranchesValidToken"/>
+    <testcase name="Success true" time="0.359" classname="BranchGetBranchesValidToken"/>
+    <testcase name="Branches response has data" time="0.359" classname="BranchGetBranchesValidToken"/>
+    <testcase name="Response time acceptable" time="0.359" classname="BranchGetBranchesValidToken"/>
+  </testsuite>
+  <testsuite name="BRANCH | GET Branches | Missing token" id="c814ab84-53b7-4f54-8f92-c65a080222ae" timestamp="2026-05-16T05:36:41.671Z" tests="2" failures="0" errors="0" time="0.987">
+    <testcase name="Missing token rejected" time="0.987" classname="BranchGetBranchesMissingToken"/>
+    <testcase name="No server error" time="0.987" classname="BranchGetBranchesMissingToken"/>
+  </testsuite>
+  <testsuite name="BRANCH | GET Branches | Invalid token" id="d1c91247-116c-4863-ac35-25948523d6c5" timestamp="2026-05-16T05:36:41.671Z" tests="2" failures="0" errors="0" time="1.025">
+    <testcase name="Invalid token rejected" time="1.025" classname="BranchGetBranchesInvalidToken"/>
+    <testcase name="No server error" time="1.025" classname="BranchGetBranchesInvalidToken"/>
+  </testsuite>
+  <testsuite name="BRANCH | GET Single Branch | Valid branch id" id="eba29e21-6aa8-48f1-a2fa-388f15b54d18" timestamp="2026-05-16T05:36:41.671Z" tests="3" failures="0" errors="0" time="0.288">
+    <testcase name="Status is acceptable" time="0.288" classname="BranchGetSingleBranchValidBranchId"/>
+    <testcase name="No server error" time="0.288" classname="BranchGetSingleBranchValidBranchId"/>
+    <testcase name="Response is JSON" time="0.288" classname="BranchGetSingleBranchValidBranchId"/>
+  </testsuite>
+  <testsuite name="BRANCH | GET Single Branch | Invalid UUID" id="7a717e4c-5604-4442-9d63-2fff1ac76c6e" timestamp="2026-05-16T05:36:41.671Z" tests="2" failures="0" errors="0" time="0.290">
+    <testcase name="Invalid UUID rejected or not found" time="0.290" classname="BranchGetSingleBranchInvalidUuid"/>
+    <testcase name="No server error" time="0.290" classname="BranchGetSingleBranchInvalidUuid"/>
+  </testsuite>
+  <testsuite name="BRANCH | GET Single Branch | Malformed UUID" id="75ca62fa-ef0d-43fb-ad62-796c0436c53e" timestamp="2026-05-16T05:36:41.671Z" tests="2" failures="0" errors="0" time="0.510">
+    <testcase name="Malformed UUID rejected" time="0.510" classname="BranchGetSingleBranchMalformedUuid"/>
+    <testcase name="No server error" time="0.510" classname="BranchGetSingleBranchMalformedUuid"/>
+  </testsuite>
+  <testsuite name="BRANCH | GET Branches | Pagination limit 1" id="69fca224-cd78-4b04-bfb0-03261b9f61e6" timestamp="2026-05-16T05:36:41.671Z" tests="3" failures="0" errors="0" time="0.344">
+    <testcase name="Status is 200 or 405" time="0.344" classname="BranchGetBranchesPaginationLimit1"/>
+    <testcase name="No server error" time="0.344" classname="BranchGetBranchesPaginationLimit1"/>
+    <testcase name="Response has data" time="0.344" classname="BranchGetBranchesPaginationLimit1"/>
+  </testsuite>
+  <testsuite name="BRANCH | GET Branches | Invalid pagination" id="158b43b3-2f04-4cc9-89a9-9f767b3dcb4c" timestamp="2026-05-16T05:36:41.671Z" tests="2" failures="0" errors="0" time="0.360">
+    <testcase name="Invalid pagination handled safely" time="0.360" classname="BranchGetBranchesInvalidPagination"/>
+    <testcase name="No server error" time="0.360" classname="BranchGetBranchesInvalidPagination"/>
+  </testsuite>
+  <testsuite name="BRANCH | GET Branches | SQL injection search" id="93df53aa-5e09-4e02-914b-3bc145ad6b36" timestamp="2026-05-16T05:36:41.671Z" tests="2" failures="0" errors="0" time="0.296">
+    <testcase name="SQL injection search handled safely" time="0.296" classname="BranchGetBranchesSqlInjectionSearch"/>
+    <testcase name="Response is not server error" time="0.296" classname="BranchGetBranchesSqlInjectionSearch"/>
+  </testsuite>
+  <testsuite name="BRANCH | GET Branches | XSS search" id="16986240-7742-4778-9233-a956f6ab5ccd" timestamp="2026-05-16T05:36:41.671Z" tests="2" failures="0" errors="0" time="0.299">
+    <testcase name="XSS search handled safely" time="0.299" classname="BranchGetBranchesXssSearch"/>
+    <testcase name="Response body does not execute script" time="0.299" classname="BranchGetBranchesXssSearch"/>
+  </testsuite>
+</testsuites>

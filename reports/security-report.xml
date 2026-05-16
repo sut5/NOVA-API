@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Novas Security Regression Suite" tests="6" time="6.657">
+  <testsuite name="SECURITY | Login | Setup token" id="cce9b8bf-8c27-454f-90aa-d4ded984580a" timestamp="2026-05-16T04:12:53.603Z" tests="1" failures="0" errors="0" time="1.255">
+    <testcase name="Login successful" time="1.255" classname="SecurityLoginSetupToken"/>
+  </testsuite>
+  <testsuite name="SECURITY | Rooms Search | SQL Injection" id="310327d9-d75a-4975-8599-0aea527481a2" timestamp="2026-05-16T04:12:53.603Z" tests="2" failures="1" errors="0" time="2.069">
+    <testcase name="SQL injection must not cause server error" time="2.069" classname="SecurityRoomsSearchSqlInjection">
+      <failure type="AssertionFailure" message="expected 500 to be below 500">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 9adc937c-e700-43e6-81a7-65976f69766e.]]>
+        <![CDATA[Collection name: Novas Security Regression Suite.]]>
+        <![CDATA[Request name: SECURITY | Rooms Search | SQL Injection.]]>
+        <![CDATA[Test description: SQL injection must not cause server error.]]>
+        <![CDATA[Error message: expected 500 to be below 500.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 500 to be below 500
+   at Object.eval sandbox-script.js:1:2).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response should be safe JSON" time="2.069" classname="SecurityRoomsSearchSqlInjection"/>
+  </testsuite>
+  <testsuite name="SECURITY | Rooms Search | XSS Payload" id="970b1590-60e8-46db-a68a-0903d0107228" timestamp="2026-05-16T04:12:53.603Z" tests="2" failures="1" errors="0" time="2.412">
+    <testcase name="XSS payload must not cause server error" time="2.412" classname="SecurityRoomsSearchXssPayload">
+      <failure type="AssertionFailure" message="expected 500 to be below 500">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 9adc937c-e700-43e6-81a7-65976f69766e.]]>
+        <![CDATA[Collection name: Novas Security Regression Suite.]]>
+        <![CDATA[Request name: SECURITY | Rooms Search | XSS Payload.]]>
+        <![CDATA[Test description: XSS payload must not cause server error.]]>
+        <![CDATA[Error message: expected 500 to be below 500.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 500 to be below 500
+   at Object.eval sandbox-script.js:1:3).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response must not echo script payload" time="2.412" classname="SecurityRoomsSearchXssPayload"/>
+  </testsuite>
+  <testsuite name="SECURITY | Branch Search | SQL Injection" id="0d27e375-ad7b-4ddd-adfa-8c39e866e205" timestamp="2026-05-16T04:12:53.603Z" tests="1" failures="0" errors="0" time="0.308">
+    <testcase name="Branch SQL injection handled safely" time="0.308" classname="SecurityBranchSearchSqlInjection"/>
+  </testsuite>
+  <testsuite name="SECURITY | Branch Search | XSS Payload" id="86bb4447-9c6b-4a02-b406-ef15dd329474" timestamp="2026-05-16T04:12:53.603Z" tests="2" failures="0" errors="0" time="0.321">
+    <testcase name="Branch XSS handled safely" time="0.321" classname="SecurityBranchSearchXssPayload"/>
+    <testcase name="Response must not echo script payload" time="0.321" classname="SecurityBranchSearchXssPayload"/>
+  </testsuite>
+  <testsuite name="SECURITY | Auth Login | SQL Injection Phone" id="e6bdb89a-18ab-4dd3-b1e3-156c0d6872a5" timestamp="2026-05-16T04:12:53.603Z" tests="2" failures="0" errors="0" time="0.292">
+    <testcase name="Login SQL injection rejected safely" time="0.292" classname="SecurityAuthLoginSqlInjectionPhone"/>
+    <testcase name="No successful login" time="0.292" classname="SecurityAuthLoginSqlInjectionPhone"/>
+  </testsuite>
+</testsuites>

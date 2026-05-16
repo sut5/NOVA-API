@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Novas Room Regression Suite" tests="13" time="9.197">
+  <testsuite name="ROOM | Login | Setup token" id="6ce3a7f8-344f-47da-8195-ed24fefe9f7d" timestamp="2026-05-16T05:37:09.516Z" tests="2" failures="0" errors="0" time="0.695">
+    <testcase name="Login status is 200" time="0.695" classname="RoomLoginSetupToken"/>
+    <testcase name="Token exists" time="0.695" classname="RoomLoginSetupToken"/>
+  </testsuite>
+  <testsuite name="ROOM | GET Rooms | Valid token" id="49f2aedf-56f5-4243-b8c2-7636cf974236" timestamp="2026-05-16T05:37:09.516Z" tests="4" failures="0" errors="0" time="0.332">
+    <testcase name="Status is 200" time="0.332" classname="RoomGetRoomsValidToken"/>
+    <testcase name="Success true" time="0.332" classname="RoomGetRoomsValidToken"/>
+    <testcase name="Rooms response has data" time="0.332" classname="RoomGetRoomsValidToken"/>
+    <testcase name="Response time acceptable" time="0.332" classname="RoomGetRoomsValidToken"/>
+  </testsuite>
+  <testsuite name="ROOM | GET Rooms | Missing token" id="1cbada74-767e-45fc-b8a4-9c3db188c268" timestamp="2026-05-16T05:37:09.516Z" tests="2" failures="0" errors="0" time="0.886">
+    <testcase name="Missing token rejected" time="0.886" classname="RoomGetRoomsMissingToken"/>
+    <testcase name="No server error" time="0.886" classname="RoomGetRoomsMissingToken"/>
+  </testsuite>
+  <testsuite name="ROOM | GET Rooms | Invalid token" id="1a34d9b3-587a-4807-90f8-eda546a4ce48" timestamp="2026-05-16T05:37:09.516Z" tests="2" failures="0" errors="0" time="0.842">
+    <testcase name="Invalid token rejected" time="0.842" classname="RoomGetRoomsInvalidToken"/>
+    <testcase name="No server error" time="0.842" classname="RoomGetRoomsInvalidToken"/>
+  </testsuite>
+  <testsuite name="ROOM | GET Single Room | Valid room id" id="8037fda9-56eb-409c-9738-938b3d3a3b01" timestamp="2026-05-16T05:37:09.516Z" tests="3" failures="0" errors="0" time="0.355">
+    <testcase name="Status is acceptable" time="0.355" classname="RoomGetSingleRoomValidRoomId"/>
+    <testcase name="No server error" time="0.355" classname="RoomGetSingleRoomValidRoomId"/>
+    <testcase name="Response is JSON" time="0.355" classname="RoomGetSingleRoomValidRoomId"/>
+  </testsuite>
+  <testsuite name="ROOM | GET Single Room | Invalid UUID" id="16f78e95-a936-47ed-8a7d-aef040e69751" timestamp="2026-05-16T05:37:09.516Z" tests="2" failures="0" errors="0" time="0.322">
+    <testcase name="Invalid UUID rejected or not found" time="0.322" classname="RoomGetSingleRoomInvalidUuid"/>
+    <testcase name="No server error" time="0.322" classname="RoomGetSingleRoomInvalidUuid"/>
+  </testsuite>
+  <testsuite name="ROOM | GET Single Room | Malformed UUID" id="dba3f905-1825-4221-be5b-fd275a4d6160" timestamp="2026-05-16T05:37:09.516Z" tests="2" failures="0" errors="0" time="0.328">
+    <testcase name="Malformed UUID rejected" time="0.328" classname="RoomGetSingleRoomMalformedUuid"/>
+    <testcase name="No server error" time="0.328" classname="RoomGetSingleRoomMalformedUuid"/>
+  </testsuite>
+  <testsuite name="ROOM | GET Rooms | Pagination limit 1" id="f0345186-8d2c-4ac3-ad1c-55b3de826203" timestamp="2026-05-16T05:37:09.516Z" tests="3" failures="0" errors="0" time="0.361">
+    <testcase name="Status is 200" time="0.361" classname="RoomGetRoomsPaginationLimit1"/>
+    <testcase name="Response has data" time="0.361" classname="RoomGetRoomsPaginationLimit1"/>
+    <testcase name="No server error" time="0.361" classname="RoomGetRoomsPaginationLimit1"/>
+  </testsuite>
+  <testsuite name="ROOM | GET Rooms | Invalid pagination" id="a992d966-249b-4765-81b9-eb1bb98c4283" timestamp="2026-05-16T05:37:09.516Z" tests="2" failures="0" errors="0" time="0.504">
+    <testcase name="Invalid pagination handled safely" time="0.504" classname="RoomGetRoomsInvalidPagination"/>
+    <testcase name="No server error" time="0.504" classname="RoomGetRoomsInvalidPagination"/>
+  </testsuite>
+  <testsuite name="ROOM | GET Rooms | SQL injection search" id="7dbe41ff-1274-495c-9943-b03b2f920688" timestamp="2026-05-16T05:37:09.516Z" tests="2" failures="2" errors="0" time="1.886">
+    <testcase name="SQL injection search handled safely" time="1.886" classname="RoomGetRoomsSqlInjectionSearch">
+      <failure type="AssertionFailure" message="expected 500 to be below 500">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: a48c0265-8555-456c-aaa3-d859f05450ef.]]>
+        <![CDATA[Collection name: Novas Room Regression Suite.]]>
+        <![CDATA[Request name: ROOM | GET Rooms | SQL injection search.]]>
+        <![CDATA[Test description: SQL injection search handled safely.]]>
+        <![CDATA[Error message: expected 500 to be below 500.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 500 to be below 500
+   at Object.eval sandbox-script.js:1:10).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response is not server error" time="1.886" classname="RoomGetRoomsSqlInjectionSearch">
+      <failure type="AssertionFailure" message="expected response to not have status code 500">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: a48c0265-8555-456c-aaa3-d859f05450ef.]]>
+        <![CDATA[Collection name: Novas Room Regression Suite.]]>
+        <![CDATA[Request name: ROOM | GET Rooms | SQL injection search.]]>
+        <![CDATA[Test description: Response is not server error.]]>
+        <![CDATA[Error message: expected response to not have status code 500.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to not have status code 500
+   at Object.eval sandbox-script.js:2:10).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="ROOM | GET Rooms | XSS search" id="e2f53d75-5bdb-41e2-b86c-e1189425b664" timestamp="2026-05-16T05:37:09.516Z" tests="2" failures="1" errors="0" time="1.814">
+    <testcase name="XSS search handled safely" time="1.814" classname="RoomGetRoomsXssSearch">
+      <failure type="AssertionFailure" message="expected 500 to be below 500">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: a48c0265-8555-456c-aaa3-d859f05450ef.]]>
+        <![CDATA[Collection name: Novas Room Regression Suite.]]>
+        <![CDATA[Request name: ROOM | GET Rooms | XSS search.]]>
+        <![CDATA[Test description: XSS search handled safely.]]>
+        <![CDATA[Error message: expected 500 to be below 500.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 500 to be below 500
+   at Object.eval sandbox-script.js:1:11).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response body does not echo script unsafely" time="1.814" classname="RoomGetRoomsXssSearch"/>
+  </testsuite>
+  <testsuite name="ROOM | POST Create Room | Missing required fields" id="1470c5f0-7f16-44f0-88ad-7d74ea41a6b6" timestamp="2026-05-16T05:37:09.516Z" tests="3" failures="0" errors="0" time="0.436">
+    <testcase name="Validation status is 422" time="0.436" classname="RoomPostCreateRoomMissingRequiredFields"/>
+    <testcase name="Validation success false" time="0.436" classname="RoomPostCreateRoomMissingRequiredFields"/>
+    <testcase name="Required field errors exist" time="0.436" classname="RoomPostCreateRoomMissingRequiredFields"/>
+  </testsuite>
+  <testsuite name="ROOM | POST Create Room | Invalid room type id" id="4624536e-a541-4614-bc38-d2240c642612" timestamp="2026-05-16T05:37:09.516Z" tests="2" failures="0" errors="0" time="0.436">
+    <testcase name="Invalid room type rejected safely" time="0.436" classname="RoomPostCreateRoomInvalidRoomTypeId"/>
+    <testcase name="No server error" time="0.436" classname="RoomPostCreateRoomInvalidRoomTypeId"/>
+  </testsuite>
+</testsuites>

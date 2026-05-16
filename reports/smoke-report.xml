@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Nova API Automation - Smoke Read Safe" tests="96" time="37.843">
+  <testsuite name="v1 / auth / login / [POST] api/v1/auth/login" id="96486909-20f0-4b1b-9a2e-2cbabd05c8a8" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="1.239">
+    <testcase name="HTTP status is not 5xx" time="1.239" classname="V1AuthLoginPostApiV1AuthLogin"/>
+    <testcase name="Response time is acceptable" time="1.239" classname="V1AuthLoginPostApiV1AuthLogin"/>
+    <testcase name="Content-Type is JSON when body exists" time="1.239" classname="V1AuthLoginPostApiV1AuthLogin"/>
+    <testcase name="Response body is valid JSON object/array" time="1.239" classname="V1AuthLoginPostApiV1AuthLogin"/>
+    <testcase name="Standard envelope fields are valid when present" time="1.239" classname="V1AuthLoginPostApiV1AuthLogin"/>
+  </testsuite>
+  <testsuite name="v1 / auth / get-socialite-token / [GET] api/v1/auth/get-socialite-token" id="2789dc7c-1c54-41f5-a438-7ed2cb1fd9b9" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.843">
+    <testcase name="HTTP status is not 5xx" time="0.843" classname="V1AuthGetSocialiteTokenGetApiV1AuthGetSocialiteToken"/>
+    <testcase name="Response time is acceptable" time="0.843" classname="V1AuthGetSocialiteTokenGetApiV1AuthGetSocialiteToken"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.843" classname="V1AuthGetSocialiteTokenGetApiV1AuthGetSocialiteToken"/>
+    <testcase name="Response body is valid JSON object/array" time="0.843" classname="V1AuthGetSocialiteTokenGetApiV1AuthGetSocialiteToken"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.843" classname="V1AuthGetSocialiteTokenGetApiV1AuthGetSocialiteToken"/>
+  </testsuite>
+  <testsuite name="v1 / auth / profile / [GET] api/v1/auth/profile" id="32791a4c-d317-4dbb-a652-b65f1f4adf67" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.309">
+    <testcase name="HTTP status is not 5xx" time="0.309" classname="V1AuthProfileGetApiV1AuthProfile"/>
+    <testcase name="Response time is acceptable" time="0.309" classname="V1AuthProfileGetApiV1AuthProfile"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.309" classname="V1AuthProfileGetApiV1AuthProfile"/>
+    <testcase name="Response body is valid JSON object/array" time="0.309" classname="V1AuthProfileGetApiV1AuthProfile"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.309" classname="V1AuthProfileGetApiV1AuthProfile"/>
+  </testsuite>
+  <testsuite name="v1 / auth / refresh-token / [GET] api/v1/auth/refresh-token" id="0339b973-09db-41c5-89c6-788b710e2d36" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.299">
+    <testcase name="HTTP status is not 5xx" time="0.299" classname="V1AuthRefreshTokenGetApiV1AuthRefreshToken"/>
+    <testcase name="Response time is acceptable" time="0.299" classname="V1AuthRefreshTokenGetApiV1AuthRefreshToken"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.299" classname="V1AuthRefreshTokenGetApiV1AuthRefreshToken"/>
+    <testcase name="Response body is valid JSON object/array" time="0.299" classname="V1AuthRefreshTokenGetApiV1AuthRefreshToken"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.299" classname="V1AuthRefreshTokenGetApiV1AuthRefreshToken"/>
+  </testsuite>
+  <testsuite name="v1 / auth / notifications / unread-counter / [GET] api/v1/auth/notifications/unread-counter" id="b8d5a7ef-e4dc-4446-830e-2eb49fae3541" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.301">
+    <testcase name="HTTP status is not 5xx" time="0.301" classname="V1AuthNotificationsUnreadCounterGetApiV1AuthNotificationsUnreadCounter"/>
+    <testcase name="Response time is acceptable" time="0.301" classname="V1AuthNotificationsUnreadCounterGetApiV1AuthNotificationsUnreadCounter"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.301" classname="V1AuthNotificationsUnreadCounterGetApiV1AuthNotificationsUnreadCounter"/>
+    <testcase name="Response body is valid JSON object/array" time="0.301" classname="V1AuthNotificationsUnreadCounterGetApiV1AuthNotificationsUnreadCounter"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.301" classname="V1AuthNotificationsUnreadCounterGetApiV1AuthNotificationsUnreadCounter"/>
+  </testsuite>
+  <testsuite name="v1 / auth / notifications / mark-all-read / [GET] api/v1/auth/notifications/mark-all-read" id="f36131d9-405a-4ca4-9819-e5cac791af24" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.299">
+    <testcase name="HTTP status is not 5xx" time="0.299" classname="V1AuthNotificationsMarkAllReadGetApiV1AuthNotificationsMarkAllRead"/>
+    <testcase name="Response time is acceptable" time="0.299" classname="V1AuthNotificationsMarkAllReadGetApiV1AuthNotificationsMarkAllRead"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.299" classname="V1AuthNotificationsMarkAllReadGetApiV1AuthNotificationsMarkAllRead"/>
+    <testcase name="Response body is valid JSON object/array" time="0.299" classname="V1AuthNotificationsMarkAllReadGetApiV1AuthNotificationsMarkAllRead"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.299" classname="V1AuthNotificationsMarkAllReadGetApiV1AuthNotificationsMarkAllRead"/>
+  </testsuite>
+  <testsuite name="v1 / auth / notifications / mark-as-read / [GET] api/v1/auth/notifications/{notification}/mark-as-read" id="9a688c5d-6434-45bc-a1fd-38d9e3dd593b" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.326">
+    <testcase name="HTTP status is not 5xx" time="0.326" classname="V1AuthNotificationsMarkAsReadGetApiV1AuthNotificationsNotificationMarkAsRead"/>
+    <testcase name="Response time is acceptable" time="0.326" classname="V1AuthNotificationsMarkAsReadGetApiV1AuthNotificationsNotificationMarkAsRead"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.326" classname="V1AuthNotificationsMarkAsReadGetApiV1AuthNotificationsNotificationMarkAsRead"/>
+    <testcase name="Response body is valid JSON object/array" time="0.326" classname="V1AuthNotificationsMarkAsReadGetApiV1AuthNotificationsNotificationMarkAsRead"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.326" classname="V1AuthNotificationsMarkAsReadGetApiV1AuthNotificationsNotificationMarkAsRead"/>
+  </testsuite>
+  <testsuite name="v1 / auth / notifications / [GET] api/v1/auth/notifications" id="7130ae27-5ced-415b-88ee-4e0cd84a28bb" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.309">
+    <testcase name="HTTP status is not 5xx" time="0.309" classname="V1AuthNotificationsGetApiV1AuthNotifications"/>
+    <testcase name="Response time is acceptable" time="0.309" classname="V1AuthNotificationsGetApiV1AuthNotifications"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.309" classname="V1AuthNotificationsGetApiV1AuthNotifications"/>
+    <testcase name="Response body is valid JSON object/array" time="0.309" classname="V1AuthNotificationsGetApiV1AuthNotifications"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.309" classname="V1AuthNotificationsGetApiV1AuthNotifications"/>
+  </testsuite>
+  <testsuite name="v1 / locales / [GET] api/v1/locales" id="581f5208-fbef-4af4-a97d-8161fabaf7a2" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.296">
+    <testcase name="HTTP status is not 5xx" time="0.296" classname="V1LocalesGetApiV1Locales"/>
+    <testcase name="Response time is acceptable" time="0.296" classname="V1LocalesGetApiV1Locales"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.296" classname="V1LocalesGetApiV1Locales"/>
+    <testcase name="Response body is valid JSON object/array" time="0.296" classname="V1LocalesGetApiV1Locales"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.296" classname="V1LocalesGetApiV1Locales"/>
+  </testsuite>
+  <testsuite name="v1 / extra / regions / [GET] api/v1/extra/regions" id="d9a78bce-7a1b-4d15-865a-4900cd64ef01" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.296">
+    <testcase name="HTTP status is not 5xx" time="0.296" classname="V1ExtraRegionsGetApiV1ExtraRegions"/>
+    <testcase name="Response time is acceptable" time="0.296" classname="V1ExtraRegionsGetApiV1ExtraRegions"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.296" classname="V1ExtraRegionsGetApiV1ExtraRegions"/>
+    <testcase name="Response body is valid JSON object/array" time="0.296" classname="V1ExtraRegionsGetApiV1ExtraRegions"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.296" classname="V1ExtraRegionsGetApiV1ExtraRegions"/>
+  </testsuite>
+  <testsuite name="v1 / extra / regions / [GET] api/v1/extra/regions/{region}" id="bbf0a87c-9cec-4a53-8b14-df4ab74bfd7e" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.289">
+    <testcase name="HTTP status is not 5xx" time="0.289" classname="V1ExtraRegionsGetApiV1ExtraRegionsRegion"/>
+    <testcase name="Response time is acceptable" time="0.289" classname="V1ExtraRegionsGetApiV1ExtraRegionsRegion"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.289" classname="V1ExtraRegionsGetApiV1ExtraRegionsRegion"/>
+    <testcase name="Response body is valid JSON object/array" time="0.289" classname="V1ExtraRegionsGetApiV1ExtraRegionsRegion"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.289" classname="V1ExtraRegionsGetApiV1ExtraRegionsRegion"/>
+  </testsuite>
+  <testsuite name="v1 / extra / cities / [GET] api/v1/extra/cities" id="10c4a7a2-f281-4d4f-90e0-c89a9e67e9ca" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.626">
+    <testcase name="HTTP status is not 5xx" time="0.626" classname="V1ExtraCitiesGetApiV1ExtraCities"/>
+    <testcase name="Response time is acceptable" time="0.626" classname="V1ExtraCitiesGetApiV1ExtraCities"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.626" classname="V1ExtraCitiesGetApiV1ExtraCities"/>
+    <testcase name="Response body is valid JSON object/array" time="0.626" classname="V1ExtraCitiesGetApiV1ExtraCities"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.626" classname="V1ExtraCitiesGetApiV1ExtraCities"/>
+  </testsuite>
+  <testsuite name="v1 / extra / cities / [GET] api/v1/extra/cities/{city}" id="c9cf7ed9-e258-4c4c-a944-90477c7a88f9" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.859">
+    <testcase name="HTTP status is not 5xx" time="0.859" classname="V1ExtraCitiesGetApiV1ExtraCitiesCity"/>
+    <testcase name="Response time is acceptable" time="0.859" classname="V1ExtraCitiesGetApiV1ExtraCitiesCity"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.859" classname="V1ExtraCitiesGetApiV1ExtraCitiesCity"/>
+    <testcase name="Response body is valid JSON object/array" time="0.859" classname="V1ExtraCitiesGetApiV1ExtraCitiesCity"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.859" classname="V1ExtraCitiesGetApiV1ExtraCitiesCity"/>
+  </testsuite>
+  <testsuite name="v1 / extra / cities / Search Cities" id="6c93a768-6bd9-4146-8a6a-f261e2a6aa22" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.295">
+    <testcase name="HTTP status is not 5xx" time="0.295" classname="V1ExtraCitiesSearchCities"/>
+    <testcase name="Response time is acceptable" time="0.295" classname="V1ExtraCitiesSearchCities"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.295" classname="V1ExtraCitiesSearchCities"/>
+    <testcase name="Response body is valid JSON object/array" time="0.295" classname="V1ExtraCitiesSearchCities"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.295" classname="V1ExtraCitiesSearchCities"/>
+  </testsuite>
+  <testsuite name="v1 / extra / sub-cities / [GET] api/v1/extra/sub-cities" id="94eafcfb-02f9-4693-a2b1-fb1b9830822a" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.364">
+    <testcase name="HTTP status is not 5xx" time="0.364" classname="V1ExtraSubCitiesGetApiV1ExtraSubCities"/>
+    <testcase name="Response time is acceptable" time="0.364" classname="V1ExtraSubCitiesGetApiV1ExtraSubCities"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.364" classname="V1ExtraSubCitiesGetApiV1ExtraSubCities"/>
+    <testcase name="Response body is valid JSON object/array" time="0.364" classname="V1ExtraSubCitiesGetApiV1ExtraSubCities"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.364" classname="V1ExtraSubCitiesGetApiV1ExtraSubCities"/>
+  </testsuite>
+  <testsuite name="v1 / extra / sub-cities / [GET] api/v1/extra/sub-cities/{sub_city}" id="91b6116c-e6ad-478e-97a4-01f332b6b453" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.359">
+    <testcase name="HTTP status is not 5xx" time="0.359" classname="V1ExtraSubCitiesGetApiV1ExtraSubCitiesSubCity"/>
+    <testcase name="Response time is acceptable" time="0.359" classname="V1ExtraSubCitiesGetApiV1ExtraSubCitiesSubCity"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.359" classname="V1ExtraSubCitiesGetApiV1ExtraSubCitiesSubCity"/>
+    <testcase name="Response body is valid JSON object/array" time="0.359" classname="V1ExtraSubCitiesGetApiV1ExtraSubCitiesSubCity"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.359" classname="V1ExtraSubCitiesGetApiV1ExtraSubCitiesSubCity"/>
+  </testsuite>
+  <testsuite name="v1 / extra / cities-multiple / [GET] api/v1/extra/cities-multiple" id="51442b28-1d62-4f0d-adb0-7db8b2846a99" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.798">
+    <testcase name="HTTP status is not 5xx" time="0.798" classname="V1ExtraCitiesMultipleGetApiV1ExtraCitiesMultiple"/>
+    <testcase name="Response time is acceptable" time="0.798" classname="V1ExtraCitiesMultipleGetApiV1ExtraCitiesMultiple"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.798" classname="V1ExtraCitiesMultipleGetApiV1ExtraCitiesMultiple"/>
+    <testcase name="Response body is valid JSON object/array" time="0.798" classname="V1ExtraCitiesMultipleGetApiV1ExtraCitiesMultiple"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.798" classname="V1ExtraCitiesMultipleGetApiV1ExtraCitiesMultiple"/>
+  </testsuite>
+  <testsuite name="v1 / extra / property-types / [GET] api/v1/extra/property-types" id="f657c85e-6f13-4659-85ac-4656aa4ae13b" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.309">
+    <testcase name="HTTP status is not 5xx" time="0.309" classname="V1ExtraPropertyTypesGetApiV1ExtraPropertyTypes"/>
+    <testcase name="Response time is acceptable" time="0.309" classname="V1ExtraPropertyTypesGetApiV1ExtraPropertyTypes"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.309" classname="V1ExtraPropertyTypesGetApiV1ExtraPropertyTypes"/>
+    <testcase name="Response body is valid JSON object/array" time="0.309" classname="V1ExtraPropertyTypesGetApiV1ExtraPropertyTypes"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.309" classname="V1ExtraPropertyTypesGetApiV1ExtraPropertyTypes"/>
+  </testsuite>
+  <testsuite name="v1 / extra / property-types / [GET] api/v1/extra/property-types/{property_type}" id="f252c8c8-99b1-4688-a7a1-eddb21e3faf4" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.317">
+    <testcase name="HTTP status is not 5xx" time="0.317" classname="V1ExtraPropertyTypesGetApiV1ExtraPropertyTypesPropertyType"/>
+    <testcase name="Response time is acceptable" time="0.317" classname="V1ExtraPropertyTypesGetApiV1ExtraPropertyTypesPropertyType"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.317" classname="V1ExtraPropertyTypesGetApiV1ExtraPropertyTypesPropertyType"/>
+    <testcase name="Response body is valid JSON object/array" time="0.317" classname="V1ExtraPropertyTypesGetApiV1ExtraPropertyTypesPropertyType"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.317" classname="V1ExtraPropertyTypesGetApiV1ExtraPropertyTypesPropertyType"/>
+  </testsuite>
+  <testsuite name="v1 / extra / banks / [GET] api/v1/extra/banks" id="d8f4128d-a018-4a58-a7d7-cae4884ef678" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.293">
+    <testcase name="HTTP status is not 5xx" time="0.293" classname="V1ExtraBanksGetApiV1ExtraBanks"/>
+    <testcase name="Response time is acceptable" time="0.293" classname="V1ExtraBanksGetApiV1ExtraBanks"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.293" classname="V1ExtraBanksGetApiV1ExtraBanks"/>
+    <testcase name="Response body is valid JSON object/array" time="0.293" classname="V1ExtraBanksGetApiV1ExtraBanks"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.293" classname="V1ExtraBanksGetApiV1ExtraBanks"/>
+  </testsuite>
+  <testsuite name="v1 / extra / banks / [GET] api/v1/extra/banks/{bank}" id="81fe3519-8c94-45d7-ad46-a17aadd7cd90" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.287">
+    <testcase name="HTTP status is not 5xx" time="0.287" classname="V1ExtraBanksGetApiV1ExtraBanksBank"/>
+    <testcase name="Response time is acceptable" time="0.287" classname="V1ExtraBanksGetApiV1ExtraBanksBank"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.287" classname="V1ExtraBanksGetApiV1ExtraBanksBank"/>
+    <testcase name="Response body is valid JSON object/array" time="0.287" classname="V1ExtraBanksGetApiV1ExtraBanksBank"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.287" classname="V1ExtraBanksGetApiV1ExtraBanksBank"/>
+  </testsuite>
+  <testsuite name="v1 / extra / amenity-type-categories-grouped-by-facility-type Copy / [GET] api/v1/extra/amenity-type-categories-grouped-by-facility-type" id="79d3694d-36ee-4642-9765-01143eddfe96" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.298">
+    <testcase name="HTTP status is not 5xx" time="0.298" classname="V1ExtraAmenityTypeCategoriesGroupedByFacilityTypeCopyGetApiV1ExtraAmenityTypeCategoriesGroupedByFacilityType"/>
+    <testcase name="Response time is acceptable" time="0.298" classname="V1ExtraAmenityTypeCategoriesGroupedByFacilityTypeCopyGetApiV1ExtraAmenityTypeCategoriesGroupedByFacilityType"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.298" classname="V1ExtraAmenityTypeCategoriesGroupedByFacilityTypeCopyGetApiV1ExtraAmenityTypeCategoriesGroupedByFacilityType"/>
+    <testcase name="Response body is valid JSON object/array" time="0.298" classname="V1ExtraAmenityTypeCategoriesGroupedByFacilityTypeCopyGetApiV1ExtraAmenityTypeCategoriesGroupedByFacilityType"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.298" classname="V1ExtraAmenityTypeCategoriesGroupedByFacilityTypeCopyGetApiV1ExtraAmenityTypeCategoriesGroupedByFacilityType"/>
+  </testsuite>
+  <testsuite name="v1 / extra / amenity-type-categories-grouped-by-utility-type Copy / [GET] api/v1/extra/amenity-type-categories-grouped-by-utility-type" id="92905262-4c31-4dc1-85aa-7ca4cb3f7cc6" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.307">
+    <testcase name="HTTP status is not 5xx" time="0.307" classname="V1ExtraAmenityTypeCategoriesGroupedByUtilityTypeCopyGetApiV1ExtraAmenityTypeCategoriesGroupedByUtilityType"/>
+    <testcase name="Response time is acceptable" time="0.307" classname="V1ExtraAmenityTypeCategoriesGroupedByUtilityTypeCopyGetApiV1ExtraAmenityTypeCategoriesGroupedByUtilityType"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.307" classname="V1ExtraAmenityTypeCategoriesGroupedByUtilityTypeCopyGetApiV1ExtraAmenityTypeCategoriesGroupedByUtilityType"/>
+    <testcase name="Response body is valid JSON object/array" time="0.307" classname="V1ExtraAmenityTypeCategoriesGroupedByUtilityTypeCopyGetApiV1ExtraAmenityTypeCategoriesGroupedByUtilityType"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.307" classname="V1ExtraAmenityTypeCategoriesGroupedByUtilityTypeCopyGetApiV1ExtraAmenityTypeCategoriesGroupedByUtilityType"/>
+  </testsuite>
+  <testsuite name="v1 / extra / locations / search / [GET] api/v1/extra/locations/search" id="d9ba50f8-6e7b-43cd-a605-087d0d7cc3a8" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.289">
+    <testcase name="HTTP status is not 5xx" time="0.289" classname="V1ExtraLocationsSearchGetApiV1ExtraLocationsSearch"/>
+    <testcase name="Response time is acceptable" time="0.289" classname="V1ExtraLocationsSearchGetApiV1ExtraLocationsSearch"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.289" classname="V1ExtraLocationsSearchGetApiV1ExtraLocationsSearch"/>
+    <testcase name="Response body is valid JSON object/array" time="0.289" classname="V1ExtraLocationsSearchGetApiV1ExtraLocationsSearch"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.289" classname="V1ExtraLocationsSearchGetApiV1ExtraLocationsSearch"/>
+  </testsuite>
+  <testsuite name="v1 / extra / properties / filter-counts / [GET] api/v1/extra/properties/filter-counts" id="ec2071c1-0c63-40cc-87a5-2a15c618b981" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.291">
+    <testcase name="HTTP status is not 5xx" time="0.291" classname="V1ExtraPropertiesFilterCountsGetApiV1ExtraPropertiesFilterCounts"/>
+    <testcase name="Response time is acceptable" time="0.291" classname="V1ExtraPropertiesFilterCountsGetApiV1ExtraPropertiesFilterCounts"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.291" classname="V1ExtraPropertiesFilterCountsGetApiV1ExtraPropertiesFilterCounts"/>
+    <testcase name="Response body is valid JSON object/array" time="0.291" classname="V1ExtraPropertiesFilterCountsGetApiV1ExtraPropertiesFilterCounts"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.291" classname="V1ExtraPropertiesFilterCountsGetApiV1ExtraPropertiesFilterCounts"/>
+  </testsuite>
+  <testsuite name="v1 / extra / properties / property-type-counts / [GET] api/v1/extra/properties/property-type-counts" id="c045c9ba-303b-4f5d-9618-d949d3a97ca5" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.302">
+    <testcase name="HTTP status is not 5xx" time="0.302" classname="V1ExtraPropertiesPropertyTypeCountsGetApiV1ExtraPropertiesPropertyTypeCounts"/>
+    <testcase name="Response time is acceptable" time="0.302" classname="V1ExtraPropertiesPropertyTypeCountsGetApiV1ExtraPropertiesPropertyTypeCounts"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.302" classname="V1ExtraPropertiesPropertyTypeCountsGetApiV1ExtraPropertiesPropertyTypeCounts"/>
+    <testcase name="Response body is valid JSON object/array" time="0.302" classname="V1ExtraPropertiesPropertyTypeCountsGetApiV1ExtraPropertiesPropertyTypeCounts"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.302" classname="V1ExtraPropertiesPropertyTypeCountsGetApiV1ExtraPropertiesPropertyTypeCounts"/>
+  </testsuite>
+  <testsuite name="v1 / extra / properties / city-counts / [GET] api/v1/extra/properties/city-counts" id="6579e882-1f9c-46b2-bb64-9650f109100b" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.301">
+    <testcase name="HTTP status is not 5xx" time="0.301" classname="V1ExtraPropertiesCityCountsGetApiV1ExtraPropertiesCityCounts"/>
+    <testcase name="Response time is acceptable" time="0.301" classname="V1ExtraPropertiesCityCountsGetApiV1ExtraPropertiesCityCounts"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.301" classname="V1ExtraPropertiesCityCountsGetApiV1ExtraPropertiesCityCounts"/>
+    <testcase name="Response body is valid JSON object/array" time="0.301" classname="V1ExtraPropertiesCityCountsGetApiV1ExtraPropertiesCityCounts"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.301" classname="V1ExtraPropertiesCityCountsGetApiV1ExtraPropertiesCityCounts"/>
+  </testsuite>
+  <testsuite name="v1 / extra / properties / room-types / [GET] api/v1/extra/properties/{branch}/room-types" id="bac40145-f397-43a8-85c2-acaaef54bb23" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.290">
+    <testcase name="HTTP status is not 5xx" time="0.290" classname="V1ExtraPropertiesRoomTypesGetApiV1ExtraPropertiesBranchRoomTypes"/>
+    <testcase name="Response time is acceptable" time="0.290" classname="V1ExtraPropertiesRoomTypesGetApiV1ExtraPropertiesBranchRoomTypes"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.290" classname="V1ExtraPropertiesRoomTypesGetApiV1ExtraPropertiesBranchRoomTypes"/>
+    <testcase name="Response body is valid JSON object/array" time="0.290" classname="V1ExtraPropertiesRoomTypesGetApiV1ExtraPropertiesBranchRoomTypes"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.290" classname="V1ExtraPropertiesRoomTypesGetApiV1ExtraPropertiesBranchRoomTypes"/>
+  </testsuite>
+  <testsuite name="v1 / extra / properties / related / [GET] api/v1/extra/properties/{branch}/related" id="a288f208-1628-47c8-a83b-81abc85e9f4f" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.293">
+    <testcase name="HTTP status is not 5xx" time="0.293" classname="V1ExtraPropertiesRelatedGetApiV1ExtraPropertiesBranchRelated"/>
+    <testcase name="Response time is acceptable" time="0.293" classname="V1ExtraPropertiesRelatedGetApiV1ExtraPropertiesBranchRelated"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.293" classname="V1ExtraPropertiesRelatedGetApiV1ExtraPropertiesBranchRelated"/>
+    <testcase name="Response body is valid JSON object/array" time="0.293" classname="V1ExtraPropertiesRelatedGetApiV1ExtraPropertiesBranchRelated"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.293" classname="V1ExtraPropertiesRelatedGetApiV1ExtraPropertiesBranchRelated"/>
+  </testsuite>
+  <testsuite name="v1 / extra / properties / [GET] api/v1/extra/properties" id="08fb0587-48b3-488c-b549-bfd1931eab75" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.360">
+    <testcase name="HTTP status is not 5xx" time="0.360" classname="V1ExtraPropertiesGetApiV1ExtraProperties"/>
+    <testcase name="Response time is acceptable" time="0.360" classname="V1ExtraPropertiesGetApiV1ExtraProperties"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.360" classname="V1ExtraPropertiesGetApiV1ExtraProperties"/>
+    <testcase name="Response body is valid JSON object/array" time="0.360" classname="V1ExtraPropertiesGetApiV1ExtraProperties"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.360" classname="V1ExtraPropertiesGetApiV1ExtraProperties"/>
+  </testsuite>
+  <testsuite name="v1 / extra / properties / [GET] api/v1/extra/properties/{branch}" id="85bd67c3-eb7d-40ce-8de8-a38191cdc68f" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.290">
+    <testcase name="HTTP status is not 5xx" time="0.290" classname="V1ExtraPropertiesGetApiV1ExtraPropertiesBranch"/>
+    <testcase name="Response time is acceptable" time="0.290" classname="V1ExtraPropertiesGetApiV1ExtraPropertiesBranch"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.290" classname="V1ExtraPropertiesGetApiV1ExtraPropertiesBranch"/>
+    <testcase name="Response body is valid JSON object/array" time="0.290" classname="V1ExtraPropertiesGetApiV1ExtraPropertiesBranch"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.290" classname="V1ExtraPropertiesGetApiV1ExtraPropertiesBranch"/>
+  </testsuite>
+  <testsuite name="v1 / extra / room-categories / [GET] api/v1/extra/room-categories" id="05f2db0e-e446-48cb-880e-74f35a6350d1" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.288">
+    <testcase name="HTTP status is not 5xx" time="0.288" classname="V1ExtraRoomCategoriesGetApiV1ExtraRoomCategories"/>
+    <testcase name="Response time is acceptable" time="0.288" classname="V1ExtraRoomCategoriesGetApiV1ExtraRoomCategories"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.288" classname="V1ExtraRoomCategoriesGetApiV1ExtraRoomCategories"/>
+    <testcase name="Response body is valid JSON object/array" time="0.288" classname="V1ExtraRoomCategoriesGetApiV1ExtraRoomCategories"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.288" classname="V1ExtraRoomCategoriesGetApiV1ExtraRoomCategories"/>
+  </testsuite>
+  <testsuite name="v1 / extra / room-categories / [GET] api/v1/admin/room-categories/{room_category}" id="d49f4522-a9e9-4556-8576-845a20b05305" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.302">
+    <testcase name="HTTP status is not 5xx" time="0.302" classname="V1ExtraRoomCategoriesGetApiV1AdminRoomCategoriesRoomCategory"/>
+    <testcase name="Response time is acceptable" time="0.302" classname="V1ExtraRoomCategoriesGetApiV1AdminRoomCategoriesRoomCategory"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.302" classname="V1ExtraRoomCategoriesGetApiV1AdminRoomCategoriesRoomCategory"/>
+    <testcase name="Response body is valid JSON object/array" time="0.302" classname="V1ExtraRoomCategoriesGetApiV1AdminRoomCategoriesRoomCategory"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.302" classname="V1ExtraRoomCategoriesGetApiV1AdminRoomCategoriesRoomCategory"/>
+  </testsuite>
+  <testsuite name="v1 / branch-listing / progress / [GET] api/v1/branch-listing/progress/{branch}" id="6791fe66-5f23-4c4a-aef2-2b96e51e6e41" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.296">
+    <testcase name="HTTP status is not 5xx" time="0.296" classname="V1BranchListingProgressGetApiV1BranchListingProgressBranch"/>
+    <testcase name="Response time is acceptable" time="0.296" classname="V1BranchListingProgressGetApiV1BranchListingProgressBranch"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.296" classname="V1BranchListingProgressGetApiV1BranchListingProgressBranch"/>
+    <testcase name="Response body is valid JSON object/array" time="0.296" classname="V1BranchListingProgressGetApiV1BranchListingProgressBranch"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.296" classname="V1BranchListingProgressGetApiV1BranchListingProgressBranch"/>
+  </testsuite>
+  <testsuite name="v1 / branch-listing / details / [GET] api/v1/branch-listing/details/{branch}" id="61e77707-92ad-4516-8f63-6b7dfce7e908" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.298">
+    <testcase name="HTTP status is not 5xx" time="0.298" classname="V1BranchListingDetailsGetApiV1BranchListingDetailsBranch"/>
+    <testcase name="Response time is acceptable" time="0.298" classname="V1BranchListingDetailsGetApiV1BranchListingDetailsBranch"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.298" classname="V1BranchListingDetailsGetApiV1BranchListingDetailsBranch"/>
+    <testcase name="Response body is valid JSON object/array" time="0.298" classname="V1BranchListingDetailsGetApiV1BranchListingDetailsBranch"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.298" classname="V1BranchListingDetailsGetApiV1BranchListingDetailsBranch"/>
+  </testsuite>
+  <testsuite name="v1 / branch-listing / ratings / [GET] api/v1/branch-listing/ratings/{branch}" id="115cba2d-0c36-45fe-9b6a-7dbc1415c0f3" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.307">
+    <testcase name="HTTP status is not 5xx" time="0.307" classname="V1BranchListingRatingsGetApiV1BranchListingRatingsBranch"/>
+    <testcase name="Response time is acceptable" time="0.307" classname="V1BranchListingRatingsGetApiV1BranchListingRatingsBranch"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.307" classname="V1BranchListingRatingsGetApiV1BranchListingRatingsBranch"/>
+    <testcase name="Response body is valid JSON object/array" time="0.307" classname="V1BranchListingRatingsGetApiV1BranchListingRatingsBranch"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.307" classname="V1BranchListingRatingsGetApiV1BranchListingRatingsBranch"/>
+  </testsuite>
+  <testsuite name="v1 / room-type-listing / progress / [GET] api/v1/room-type-listing/progress/{roomType}" id="f55eed33-723b-432f-9edf-9b92e213dc1d" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.295">
+    <testcase name="HTTP status is not 5xx" time="0.295" classname="V1RoomTypeListingProgressGetApiV1RoomTypeListingProgressRoomType"/>
+    <testcase name="Response time is acceptable" time="0.295" classname="V1RoomTypeListingProgressGetApiV1RoomTypeListingProgressRoomType"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.295" classname="V1RoomTypeListingProgressGetApiV1RoomTypeListingProgressRoomType"/>
+    <testcase name="Response body is valid JSON object/array" time="0.295" classname="V1RoomTypeListingProgressGetApiV1RoomTypeListingProgressRoomType"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.295" classname="V1RoomTypeListingProgressGetApiV1RoomTypeListingProgressRoomType"/>
+  </testsuite>
+  <testsuite name="v1 / room-type-listing / details / [GET] api/v1/room-type-listing/details/{roomType}" id="e2eaa1bb-0a9a-41a7-a296-423f03e834d1" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.301">
+    <testcase name="HTTP status is not 5xx" time="0.301" classname="V1RoomTypeListingDetailsGetApiV1RoomTypeListingDetailsRoomType"/>
+    <testcase name="Response time is acceptable" time="0.301" classname="V1RoomTypeListingDetailsGetApiV1RoomTypeListingDetailsRoomType"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.301" classname="V1RoomTypeListingDetailsGetApiV1RoomTypeListingDetailsRoomType"/>
+    <testcase name="Response body is valid JSON object/array" time="0.301" classname="V1RoomTypeListingDetailsGetApiV1RoomTypeListingDetailsRoomType"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.301" classname="V1RoomTypeListingDetailsGetApiV1RoomTypeListingDetailsRoomType"/>
+  </testsuite>
+  <testsuite name="v1 / discount / active / [GET] api/v1/discount/active" id="ac4ec944-ad13-40c5-ba41-e3b9ebd08389" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.339">
+    <testcase name="HTTP status is not 5xx" time="0.339" classname="V1DiscountActiveGetApiV1DiscountActive"/>
+    <testcase name="Response time is acceptable" time="0.339" classname="V1DiscountActiveGetApiV1DiscountActive"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.339" classname="V1DiscountActiveGetApiV1DiscountActive"/>
+    <testcase name="Response body is valid JSON object/array" time="0.339" classname="V1DiscountActiveGetApiV1DiscountActive"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.339" classname="V1DiscountActiveGetApiV1DiscountActive"/>
+  </testsuite>
+  <testsuite name="v1 / discount / expired / [GET] api/v1/discount/expired" id="ec8b5163-fb49-483e-be03-d51946908d89" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.337">
+    <testcase name="HTTP status is not 5xx" time="0.337" classname="V1DiscountExpiredGetApiV1DiscountExpired"/>
+    <testcase name="Response time is acceptable" time="0.337" classname="V1DiscountExpiredGetApiV1DiscountExpired"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.337" classname="V1DiscountExpiredGetApiV1DiscountExpired"/>
+    <testcase name="Response body is valid JSON object/array" time="0.337" classname="V1DiscountExpiredGetApiV1DiscountExpired"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.337" classname="V1DiscountExpiredGetApiV1DiscountExpired"/>
+  </testsuite>
+  <testsuite name="v1 / discount / Scheduled / [GET] api/v1/discount/scheduled" id="9327dece-10fd-4d84-a8cd-5898c8a488ff" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.322">
+    <testcase name="HTTP status is not 5xx" time="0.322" classname="V1DiscountScheduledGetApiV1DiscountScheduled"/>
+    <testcase name="Response time is acceptable" time="0.322" classname="V1DiscountScheduledGetApiV1DiscountScheduled"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.322" classname="V1DiscountScheduledGetApiV1DiscountScheduled"/>
+    <testcase name="Response body is valid JSON object/array" time="0.322" classname="V1DiscountScheduledGetApiV1DiscountScheduled"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.322" classname="V1DiscountScheduledGetApiV1DiscountScheduled"/>
+  </testsuite>
+  <testsuite name="v1 / discount / [GET] api/v1/discount" id="64de413c-0da1-4f91-800c-9e272aa47d01" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.368">
+    <testcase name="HTTP status is not 5xx" time="0.368" classname="V1DiscountGetApiV1Discount"/>
+    <testcase name="Response time is acceptable" time="0.368" classname="V1DiscountGetApiV1Discount"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.368" classname="V1DiscountGetApiV1Discount"/>
+    <testcase name="Response body is valid JSON object/array" time="0.368" classname="V1DiscountGetApiV1Discount"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.368" classname="V1DiscountGetApiV1Discount"/>
+  </testsuite>
+  <testsuite name="v1 / discount / [GET] api/v1/discount/{discount}" id="8e73105c-c1b8-42d3-8680-145dcbb935a8" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.525">
+    <testcase name="HTTP status is not 5xx" time="0.525" classname="V1DiscountGetApiV1DiscountDiscount"/>
+    <testcase name="Response time is acceptable" time="0.525" classname="V1DiscountGetApiV1DiscountDiscount"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.525" classname="V1DiscountGetApiV1DiscountDiscount"/>
+    <testcase name="Response body is valid JSON object/array" time="0.525" classname="V1DiscountGetApiV1DiscountDiscount"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.525" classname="V1DiscountGetApiV1DiscountDiscount"/>
+  </testsuite>
+  <testsuite name="v1 / cancellation-policy / [GET] api/v1/cancellation-policy" id="ccb01313-d918-4410-ba86-b79d5e3168e1" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.367">
+    <testcase name="HTTP status is not 5xx" time="0.367" classname="V1CancellationPolicyGetApiV1CancellationPolicy"/>
+    <testcase name="Response time is acceptable" time="0.367" classname="V1CancellationPolicyGetApiV1CancellationPolicy"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.367" classname="V1CancellationPolicyGetApiV1CancellationPolicy"/>
+    <testcase name="Response body is valid JSON object/array" time="0.367" classname="V1CancellationPolicyGetApiV1CancellationPolicy"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.367" classname="V1CancellationPolicyGetApiV1CancellationPolicy"/>
+  </testsuite>
+  <testsuite name="v1 / cancellation-policy / [GET] api/v1/cancellation-policy/{cancellation_policy}" id="dde26193-5bda-41d8-ba19-c351a62bbfb1" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.369">
+    <testcase name="HTTP status is not 5xx" time="0.369" classname="V1CancellationPolicyGetApiV1CancellationPolicyCancellationPolicy"/>
+    <testcase name="Response time is acceptable" time="0.369" classname="V1CancellationPolicyGetApiV1CancellationPolicyCancellationPolicy"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.369" classname="V1CancellationPolicyGetApiV1CancellationPolicyCancellationPolicy"/>
+    <testcase name="Response body is valid JSON object/array" time="0.369" classname="V1CancellationPolicyGetApiV1CancellationPolicyCancellationPolicy"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.369" classname="V1CancellationPolicyGetApiV1CancellationPolicyCancellationPolicy"/>
+  </testsuite>
+  <testsuite name="v1 / booking / [GET] api/v1/booking" id="2e2b4fa9-1cb9-4859-8d02-b191b5525d3c" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.529">
+    <testcase name="HTTP status is not 5xx" time="0.529" classname="V1BookingGetApiV1Booking"/>
+    <testcase name="Response time is acceptable" time="0.529" classname="V1BookingGetApiV1Booking"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.529" classname="V1BookingGetApiV1Booking"/>
+    <testcase name="Response body is valid JSON object/array" time="0.529" classname="V1BookingGetApiV1Booking"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.529" classname="V1BookingGetApiV1Booking"/>
+  </testsuite>
+  <testsuite name="v1 / booking / [GET] api/v1/booking-calendar" id="180cef86-5fdd-4d64-a155-a5c46f649697" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.303">
+    <testcase name="HTTP status is not 5xx" time="0.303" classname="V1BookingGetApiV1BookingCalendar"/>
+    <testcase name="Response time is acceptable" time="0.303" classname="V1BookingGetApiV1BookingCalendar"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.303" classname="V1BookingGetApiV1BookingCalendar"/>
+    <testcase name="Response body is valid JSON object/array" time="0.303" classname="V1BookingGetApiV1BookingCalendar"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.303" classname="V1BookingGetApiV1BookingCalendar"/>
+  </testsuite>
+  <testsuite name="v1 / booking / [GET] api/v1/booking/{booking}" id="f8b78d31-38f6-4e02-8923-befefd3ec42b" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.517">
+    <testcase name="HTTP status is not 5xx" time="0.517" classname="V1BookingGetApiV1BookingBooking"/>
+    <testcase name="Response time is acceptable" time="0.517" classname="V1BookingGetApiV1BookingBooking"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.517" classname="V1BookingGetApiV1BookingBooking"/>
+    <testcase name="Response body is valid JSON object/array" time="0.517" classname="V1BookingGetApiV1BookingBooking"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.517" classname="V1BookingGetApiV1BookingBooking"/>
+  </testsuite>
+  <testsuite name="v1 / booking / [GET] api/v1/booking/{booking} - qr callback" id="da88f2f4-c6c5-4ac8-ad21-ecbf396dfda6" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.301">
+    <testcase name="HTTP status is not 5xx" time="0.301" classname="V1BookingGetApiV1BookingBookingQrCallback"/>
+    <testcase name="Response time is acceptable" time="0.301" classname="V1BookingGetApiV1BookingBookingQrCallback"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.301" classname="V1BookingGetApiV1BookingBookingQrCallback"/>
+    <testcase name="Response body is valid JSON object/array" time="0.301" classname="V1BookingGetApiV1BookingBookingQrCallback"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.301" classname="V1BookingGetApiV1BookingBookingQrCallback"/>
+  </testsuite>
+  <testsuite name="v1 / booking / [GET] api/v1/bookings/by-initiator" id="e336c13d-2c37-4d8f-9db4-3ff4c5b6e4ee" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.459">
+    <testcase name="HTTP status is not 5xx" time="0.459" classname="V1BookingGetApiV1BookingsByInitiator"/>
+    <testcase name="Response time is acceptable" time="0.459" classname="V1BookingGetApiV1BookingsByInitiator"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.459" classname="V1BookingGetApiV1BookingsByInitiator"/>
+    <testcase name="Response body is valid JSON object/array" time="0.459" classname="V1BookingGetApiV1BookingsByInitiator"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.459" classname="V1BookingGetApiV1BookingsByInitiator"/>
+  </testsuite>
+  <testsuite name="v1 / admin / activities / [GET] api/v1/activities" id="422b0027-fc99-48f6-b0f6-cebec1d69801" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.320">
+    <testcase name="HTTP status is not 5xx" time="0.320" classname="V1AdminActivitiesGetApiV1Activities"/>
+    <testcase name="Response time is acceptable" time="0.320" classname="V1AdminActivitiesGetApiV1Activities"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.320" classname="V1AdminActivitiesGetApiV1Activities"/>
+    <testcase name="Response body is valid JSON object/array" time="0.320" classname="V1AdminActivitiesGetApiV1Activities"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.320" classname="V1AdminActivitiesGetApiV1Activities"/>
+  </testsuite>
+  <testsuite name="v1 / admin / activities / [GET] api/v1/activities/{activity}" id="98656b64-f971-4f05-85f5-b1293b5ccb5e" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.296">
+    <testcase name="HTTP status is not 5xx" time="0.296" classname="V1AdminActivitiesGetApiV1ActivitiesActivity"/>
+    <testcase name="Response time is acceptable" time="0.296" classname="V1AdminActivitiesGetApiV1ActivitiesActivity"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.296" classname="V1AdminActivitiesGetApiV1ActivitiesActivity"/>
+    <testcase name="Response body is valid JSON object/array" time="0.296" classname="V1AdminActivitiesGetApiV1ActivitiesActivity"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.296" classname="V1AdminActivitiesGetApiV1ActivitiesActivity"/>
+  </testsuite>
+  <testsuite name="v1 / admin / regions / [GET] api/v1/admin/regions" id="5532edb2-cb67-4f84-b502-a2e71693fb07" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.304">
+    <testcase name="HTTP status is not 5xx" time="0.304" classname="V1AdminRegionsGetApiV1AdminRegions"/>
+    <testcase name="Response time is acceptable" time="0.304" classname="V1AdminRegionsGetApiV1AdminRegions"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.304" classname="V1AdminRegionsGetApiV1AdminRegions"/>
+    <testcase name="Response body is valid JSON object/array" time="0.304" classname="V1AdminRegionsGetApiV1AdminRegions"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.304" classname="V1AdminRegionsGetApiV1AdminRegions"/>
+  </testsuite>
+  <testsuite name="v1 / admin / regions / [GET] api/v1/admin/regions/{region}" id="392e5414-5341-4ee8-998b-c270ec24fdd7" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.303">
+    <testcase name="HTTP status is not 5xx" time="0.303" classname="V1AdminRegionsGetApiV1AdminRegionsRegion"/>
+    <testcase name="Response time is acceptable" time="0.303" classname="V1AdminRegionsGetApiV1AdminRegionsRegion"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.303" classname="V1AdminRegionsGetApiV1AdminRegionsRegion"/>
+    <testcase name="Response body is valid JSON object/array" time="0.303" classname="V1AdminRegionsGetApiV1AdminRegionsRegion"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.303" classname="V1AdminRegionsGetApiV1AdminRegionsRegion"/>
+  </testsuite>
+  <testsuite name="v1 / admin / cities / [GET] api/v1/admin/cities" id="6a0359f4-193e-431b-aecb-fd54b1fafb3f" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.392">
+    <testcase name="HTTP status is not 5xx" time="0.392" classname="V1AdminCitiesGetApiV1AdminCities"/>
+    <testcase name="Response time is acceptable" time="0.392" classname="V1AdminCitiesGetApiV1AdminCities"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.392" classname="V1AdminCitiesGetApiV1AdminCities"/>
+    <testcase name="Response body is valid JSON object/array" time="0.392" classname="V1AdminCitiesGetApiV1AdminCities"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.392" classname="V1AdminCitiesGetApiV1AdminCities"/>
+  </testsuite>
+  <testsuite name="v1 / admin / cities / [GET] api/v1/admin/cities/{city}" id="40ace758-0c3a-45cf-9607-614cf558c857" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.367">
+    <testcase name="HTTP status is not 5xx" time="0.367" classname="V1AdminCitiesGetApiV1AdminCitiesCity"/>
+    <testcase name="Response time is acceptable" time="0.367" classname="V1AdminCitiesGetApiV1AdminCitiesCity"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.367" classname="V1AdminCitiesGetApiV1AdminCitiesCity"/>
+    <testcase name="Response body is valid JSON object/array" time="0.367" classname="V1AdminCitiesGetApiV1AdminCitiesCity"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.367" classname="V1AdminCitiesGetApiV1AdminCitiesCity"/>
+  </testsuite>
+  <testsuite name="v1 / admin / sub-cities / [GET] api/v1/admin/sub-cities" id="f88616b0-2fd1-4ada-b26a-b9598f1c7a5f" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.379">
+    <testcase name="HTTP status is not 5xx" time="0.379" classname="V1AdminSubCitiesGetApiV1AdminSubCities"/>
+    <testcase name="Response time is acceptable" time="0.379" classname="V1AdminSubCitiesGetApiV1AdminSubCities"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.379" classname="V1AdminSubCitiesGetApiV1AdminSubCities"/>
+    <testcase name="Response body is valid JSON object/array" time="0.379" classname="V1AdminSubCitiesGetApiV1AdminSubCities"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.379" classname="V1AdminSubCitiesGetApiV1AdminSubCities"/>
+  </testsuite>
+  <testsuite name="v1 / admin / sub-cities / [GET] api/v1/admin/sub-cities/{sub_city}" id="075e3720-a871-423d-b909-d3833da847b1" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.406">
+    <testcase name="HTTP status is not 5xx" time="0.406" classname="V1AdminSubCitiesGetApiV1AdminSubCitiesSubCity"/>
+    <testcase name="Response time is acceptable" time="0.406" classname="V1AdminSubCitiesGetApiV1AdminSubCitiesSubCity"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.406" classname="V1AdminSubCitiesGetApiV1AdminSubCitiesSubCity"/>
+    <testcase name="Response body is valid JSON object/array" time="0.406" classname="V1AdminSubCitiesGetApiV1AdminSubCitiesSubCity"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.406" classname="V1AdminSubCitiesGetApiV1AdminSubCitiesSubCity"/>
+  </testsuite>
+  <testsuite name="v1 / admin / accessibility-types / [GET] api/v1/admin/accessibility-types" id="d4bf692d-8a4b-4bc4-be80-50aedd59fb6e" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.520">
+    <testcase name="HTTP status is not 5xx" time="0.520" classname="V1AdminAccessibilityTypesGetApiV1AdminAccessibilityTypes"/>
+    <testcase name="Response time is acceptable" time="0.520" classname="V1AdminAccessibilityTypesGetApiV1AdminAccessibilityTypes"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.520" classname="V1AdminAccessibilityTypesGetApiV1AdminAccessibilityTypes"/>
+    <testcase name="Response body is valid JSON object/array" time="0.520" classname="V1AdminAccessibilityTypesGetApiV1AdminAccessibilityTypes"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.520" classname="V1AdminAccessibilityTypesGetApiV1AdminAccessibilityTypes"/>
+  </testsuite>
+  <testsuite name="v1 / admin / accessibility-types / [GET] api/v1/admin/accessibility-types/{accessibility_type}" id="2ddff083-7a86-406a-9d97-a2ee36855349" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.297">
+    <testcase name="HTTP status is not 5xx" time="0.297" classname="V1AdminAccessibilityTypesGetApiV1AdminAccessibilityTypesAccessibilityType"/>
+    <testcase name="Response time is acceptable" time="0.297" classname="V1AdminAccessibilityTypesGetApiV1AdminAccessibilityTypesAccessibilityType"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.297" classname="V1AdminAccessibilityTypesGetApiV1AdminAccessibilityTypesAccessibilityType"/>
+    <testcase name="Response body is valid JSON object/array" time="0.297" classname="V1AdminAccessibilityTypesGetApiV1AdminAccessibilityTypesAccessibilityType"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.297" classname="V1AdminAccessibilityTypesGetApiV1AdminAccessibilityTypesAccessibilityType"/>
+  </testsuite>
+  <testsuite name="v1 / admin / amenity-type-categories / [GET] api/v1/admin/amenity-type-categories" id="c305993d-00cd-4dea-8b3f-08208e94e611" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.298">
+    <testcase name="HTTP status is not 5xx" time="0.298" classname="V1AdminAmenityTypeCategoriesGetApiV1AdminAmenityTypeCategories"/>
+    <testcase name="Response time is acceptable" time="0.298" classname="V1AdminAmenityTypeCategoriesGetApiV1AdminAmenityTypeCategories"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.298" classname="V1AdminAmenityTypeCategoriesGetApiV1AdminAmenityTypeCategories"/>
+    <testcase name="Response body is valid JSON object/array" time="0.298" classname="V1AdminAmenityTypeCategoriesGetApiV1AdminAmenityTypeCategories"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.298" classname="V1AdminAmenityTypeCategoriesGetApiV1AdminAmenityTypeCategories"/>
+  </testsuite>
+  <testsuite name="v1 / admin / amenity-type-categories / [GET] api/v1/admin/amenity-type-categories/{amenity_type_category}" id="3f1118d6-e6e9-4f0b-a5ab-d51d338be0cc" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.304">
+    <testcase name="HTTP status is not 5xx" time="0.304" classname="V1AdminAmenityTypeCategoriesGetApiV1AdminAmenityTypeCategoriesAmenityTypeCategory"/>
+    <testcase name="Response time is acceptable" time="0.304" classname="V1AdminAmenityTypeCategoriesGetApiV1AdminAmenityTypeCategoriesAmenityTypeCategory"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.304" classname="V1AdminAmenityTypeCategoriesGetApiV1AdminAmenityTypeCategoriesAmenityTypeCategory"/>
+    <testcase name="Response body is valid JSON object/array" time="0.304" classname="V1AdminAmenityTypeCategoriesGetApiV1AdminAmenityTypeCategoriesAmenityTypeCategory"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.304" classname="V1AdminAmenityTypeCategoriesGetApiV1AdminAmenityTypeCategoriesAmenityTypeCategory"/>
+  </testsuite>
+  <testsuite name="v1 / admin / amenity-types / [GET] api/v1/admin/amenity-types" id="b81d1713-f354-42b9-a8e7-39cbdbed224f" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.315">
+    <testcase name="HTTP status is not 5xx" time="0.315" classname="V1AdminAmenityTypesGetApiV1AdminAmenityTypes"/>
+    <testcase name="Response time is acceptable" time="0.315" classname="V1AdminAmenityTypesGetApiV1AdminAmenityTypes"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.315" classname="V1AdminAmenityTypesGetApiV1AdminAmenityTypes"/>
+    <testcase name="Response body is valid JSON object/array" time="0.315" classname="V1AdminAmenityTypesGetApiV1AdminAmenityTypes"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.315" classname="V1AdminAmenityTypesGetApiV1AdminAmenityTypes"/>
+  </testsuite>
+  <testsuite name="v1 / admin / amenity-types / [GET] api/v1/admin/amenity-types/{amenity_type}" id="b08a2954-e603-4300-8d28-1f83e603175c" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.321">
+    <testcase name="HTTP status is not 5xx" time="0.321" classname="V1AdminAmenityTypesGetApiV1AdminAmenityTypesAmenityType"/>
+    <testcase name="Response time is acceptable" time="0.321" classname="V1AdminAmenityTypesGetApiV1AdminAmenityTypesAmenityType"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.321" classname="V1AdminAmenityTypesGetApiV1AdminAmenityTypesAmenityType"/>
+    <testcase name="Response body is valid JSON object/array" time="0.321" classname="V1AdminAmenityTypesGetApiV1AdminAmenityTypesAmenityType"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.321" classname="V1AdminAmenityTypesGetApiV1AdminAmenityTypesAmenityType"/>
+  </testsuite>
+  <testsuite name="v1 / admin / bed-types / [GET] api/v1/admin/bed-types" id="253f118c-2f80-4446-86a4-ae037f1477af" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.311">
+    <testcase name="HTTP status is not 5xx" time="0.311" classname="V1AdminBedTypesGetApiV1AdminBedTypes"/>
+    <testcase name="Response time is acceptable" time="0.311" classname="V1AdminBedTypesGetApiV1AdminBedTypes"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.311" classname="V1AdminBedTypesGetApiV1AdminBedTypes"/>
+    <testcase name="Response body is valid JSON object/array" time="0.311" classname="V1AdminBedTypesGetApiV1AdminBedTypes"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.311" classname="V1AdminBedTypesGetApiV1AdminBedTypes"/>
+  </testsuite>
+  <testsuite name="v1 / admin / bed-types / [GET] api/v1/admin/bed-types/{bed_type}" id="b82d0832-4888-40c7-952f-4a053982b7c1" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.303">
+    <testcase name="HTTP status is not 5xx" time="0.303" classname="V1AdminBedTypesGetApiV1AdminBedTypesBedType"/>
+    <testcase name="Response time is acceptable" time="0.303" classname="V1AdminBedTypesGetApiV1AdminBedTypesBedType"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.303" classname="V1AdminBedTypesGetApiV1AdminBedTypesBedType"/>
+    <testcase name="Response body is valid JSON object/array" time="0.303" classname="V1AdminBedTypesGetApiV1AdminBedTypesBedType"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.303" classname="V1AdminBedTypesGetApiV1AdminBedTypesBedType"/>
+  </testsuite>
+  <testsuite name="v1 / admin / branches / [GET] api/v1/admin/branches" id="20b28c52-ed7e-4699-b9ce-3f8c066af8d2" timestamp="2026-05-15T14:16:24.666Z" tests="8" failures="0" errors="0" time="0.541">
+    <testcase name="Response is successful" time="0.541" classname="V1AdminBranchesGetApiV1AdminBranches"/>
+    <testcase name="Branches exist" time="0.541" classname="V1AdminBranchesGetApiV1AdminBranches"/>
+    <testcase name="Branch ID stored successfully" time="0.541" classname="V1AdminBranchesGetApiV1AdminBranches"/>
+    <testcase name="HTTP status is not 5xx" time="0.541" classname="V1AdminBranchesGetApiV1AdminBranches"/>
+    <testcase name="Response time is acceptable" time="0.541" classname="V1AdminBranchesGetApiV1AdminBranches"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.541" classname="V1AdminBranchesGetApiV1AdminBranches"/>
+    <testcase name="Response body is valid JSON object/array" time="0.541" classname="V1AdminBranchesGetApiV1AdminBranches"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.541" classname="V1AdminBranchesGetApiV1AdminBranches"/>
+  </testsuite>
+  <testsuite name="v1 / admin / branches / [GET] api/v1/admin/branches/{branch}" id="d18d6b28-223c-4b7e-8dd5-b95c7d72f201" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.296">
+    <testcase name="HTTP status is not 5xx" time="0.296" classname="V1AdminBranchesGetApiV1AdminBranchesBranch"/>
+    <testcase name="Response time is acceptable" time="0.296" classname="V1AdminBranchesGetApiV1AdminBranchesBranch"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.296" classname="V1AdminBranchesGetApiV1AdminBranchesBranch"/>
+    <testcase name="Response body is valid JSON object/array" time="0.296" classname="V1AdminBranchesGetApiV1AdminBranchesBranch"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.296" classname="V1AdminBranchesGetApiV1AdminBranchesBranch"/>
+  </testsuite>
+  <testsuite name="v1 / admin / partners / [GET] api/v1/admin/partners" id="db2a378d-d322-44dd-a0a3-08d77a50f5bb" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.320">
+    <testcase name="HTTP status is not 5xx" time="0.320" classname="V1AdminPartnersGetApiV1AdminPartners"/>
+    <testcase name="Response time is acceptable" time="0.320" classname="V1AdminPartnersGetApiV1AdminPartners"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.320" classname="V1AdminPartnersGetApiV1AdminPartners"/>
+    <testcase name="Response body is valid JSON object/array" time="0.320" classname="V1AdminPartnersGetApiV1AdminPartners"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.320" classname="V1AdminPartnersGetApiV1AdminPartners"/>
+  </testsuite>
+  <testsuite name="v1 / admin / partners / [GET] api/v1/admin/partners/{partner}" id="94cf5baf-aee9-4372-9130-af7ab3b42369" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.317">
+    <testcase name="HTTP status is not 5xx" time="0.317" classname="V1AdminPartnersGetApiV1AdminPartnersPartner"/>
+    <testcase name="Response time is acceptable" time="0.317" classname="V1AdminPartnersGetApiV1AdminPartnersPartner"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.317" classname="V1AdminPartnersGetApiV1AdminPartnersPartner"/>
+    <testcase name="Response body is valid JSON object/array" time="0.317" classname="V1AdminPartnersGetApiV1AdminPartnersPartner"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.317" classname="V1AdminPartnersGetApiV1AdminPartnersPartner"/>
+  </testsuite>
+  <testsuite name="v1 / admin / ratings / [GET] api/v1/admin/ratings" id="161e02d5-41aa-48cd-87f2-923dae2ebee7" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="1.028">
+    <testcase name="HTTP status is not 5xx" time="1.028" classname="V1AdminRatingsGetApiV1AdminRatings"/>
+    <testcase name="Response time is acceptable" time="1.028" classname="V1AdminRatingsGetApiV1AdminRatings"/>
+    <testcase name="Content-Type is JSON when body exists" time="1.028" classname="V1AdminRatingsGetApiV1AdminRatings"/>
+    <testcase name="Response body is valid JSON object/array" time="1.028" classname="V1AdminRatingsGetApiV1AdminRatings"/>
+    <testcase name="Standard envelope fields are valid when present" time="1.028" classname="V1AdminRatingsGetApiV1AdminRatings"/>
+  </testsuite>
+  <testsuite name="v1 / admin / ratings / [GET] api/v1/admin/ratings/{rating}" id="2209aa74-7ed6-4eee-aab7-c3f18ac4690b" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="1.251">
+    <testcase name="HTTP status is not 5xx" time="1.251" classname="V1AdminRatingsGetApiV1AdminRatingsRating"/>
+    <testcase name="Response time is acceptable" time="1.251" classname="V1AdminRatingsGetApiV1AdminRatingsRating"/>
+    <testcase name="Content-Type is JSON when body exists" time="1.251" classname="V1AdminRatingsGetApiV1AdminRatingsRating"/>
+    <testcase name="Response body is valid JSON object/array" time="1.251" classname="V1AdminRatingsGetApiV1AdminRatingsRating"/>
+    <testcase name="Standard envelope fields are valid when present" time="1.251" classname="V1AdminRatingsGetApiV1AdminRatingsRating"/>
+  </testsuite>
+  <testsuite name="v1 / admin / room-categories / [GET] api/v1/admin/room-categories" id="efceb79a-13b4-46a5-a5f1-e23679e56f1d" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.295">
+    <testcase name="HTTP status is not 5xx" time="0.295" classname="V1AdminRoomCategoriesGetApiV1AdminRoomCategories"/>
+    <testcase name="Response time is acceptable" time="0.295" classname="V1AdminRoomCategoriesGetApiV1AdminRoomCategories"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.295" classname="V1AdminRoomCategoriesGetApiV1AdminRoomCategories"/>
+    <testcase name="Response body is valid JSON object/array" time="0.295" classname="V1AdminRoomCategoriesGetApiV1AdminRoomCategories"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.295" classname="V1AdminRoomCategoriesGetApiV1AdminRoomCategories"/>
+  </testsuite>
+  <testsuite name="v1 / admin / room-categories / [GET] api/v1/admin/room-categories/{room_category}" id="fb9b63d7-58cf-44ea-9b5f-650fa518b6e9" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.296">
+    <testcase name="HTTP status is not 5xx" time="0.296" classname="V1AdminRoomCategoriesGetApiV1AdminRoomCategoriesRoomCategory"/>
+    <testcase name="Response time is acceptable" time="0.296" classname="V1AdminRoomCategoriesGetApiV1AdminRoomCategoriesRoomCategory"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.296" classname="V1AdminRoomCategoriesGetApiV1AdminRoomCategoriesRoomCategory"/>
+    <testcase name="Response body is valid JSON object/array" time="0.296" classname="V1AdminRoomCategoriesGetApiV1AdminRoomCategoriesRoomCategory"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.296" classname="V1AdminRoomCategoriesGetApiV1AdminRoomCategoriesRoomCategory"/>
+  </testsuite>
+  <testsuite name="v1 / admin / rooms / [GET] api/v1/admin/rooms" id="046ab75b-b9e1-4d95-a66e-8dbd8a91babe" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.877">
+    <testcase name="HTTP status is not 5xx" time="0.877" classname="V1AdminRoomsGetApiV1AdminRooms"/>
+    <testcase name="Response time is acceptable" time="0.877" classname="V1AdminRoomsGetApiV1AdminRooms"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.877" classname="V1AdminRoomsGetApiV1AdminRooms"/>
+    <testcase name="Response body is valid JSON object/array" time="0.877" classname="V1AdminRoomsGetApiV1AdminRooms"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.877" classname="V1AdminRoomsGetApiV1AdminRooms"/>
+  </testsuite>
+  <testsuite name="v1 / admin / rooms / [GET] api/v1/admin/rooms/{room}" id="d9ee0f60-8f40-44ee-ae4e-0c5f195676d3" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.304">
+    <testcase name="HTTP status is not 5xx" time="0.304" classname="V1AdminRoomsGetApiV1AdminRoomsRoom"/>
+    <testcase name="Response time is acceptable" time="0.304" classname="V1AdminRoomsGetApiV1AdminRoomsRoom"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.304" classname="V1AdminRoomsGetApiV1AdminRoomsRoom"/>
+    <testcase name="Response body is valid JSON object/array" time="0.304" classname="V1AdminRoomsGetApiV1AdminRoomsRoom"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.304" classname="V1AdminRoomsGetApiV1AdminRoomsRoom"/>
+  </testsuite>
+  <testsuite name="v1 / admin / room-types / [GET] api/v1/admin/room-types" id="3a6400c9-4ec0-4149-9920-3f2f5da0c8b3" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.446">
+    <testcase name="HTTP status is not 5xx" time="0.446" classname="V1AdminRoomTypesGetApiV1AdminRoomTypes"/>
+    <testcase name="Response time is acceptable" time="0.446" classname="V1AdminRoomTypesGetApiV1AdminRoomTypes"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.446" classname="V1AdminRoomTypesGetApiV1AdminRoomTypes"/>
+    <testcase name="Response body is valid JSON object/array" time="0.446" classname="V1AdminRoomTypesGetApiV1AdminRoomTypes"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.446" classname="V1AdminRoomTypesGetApiV1AdminRoomTypes"/>
+  </testsuite>
+  <testsuite name="v1 / admin / room-types / [GET] api/v1/admin/room-types/{room_type}" id="07290be2-7216-4994-860e-2273bdcd8317" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.319">
+    <testcase name="HTTP status is not 5xx" time="0.319" classname="V1AdminRoomTypesGetApiV1AdminRoomTypesRoomType"/>
+    <testcase name="Response time is acceptable" time="0.319" classname="V1AdminRoomTypesGetApiV1AdminRoomTypesRoomType"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.319" classname="V1AdminRoomTypesGetApiV1AdminRoomTypesRoomType"/>
+    <testcase name="Response body is valid JSON object/array" time="0.319" classname="V1AdminRoomTypesGetApiV1AdminRoomTypesRoomType"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.319" classname="V1AdminRoomTypesGetApiV1AdminRoomTypesRoomType"/>
+  </testsuite>
+  <testsuite name="v1 / admin / users / customers / [GET] api/v1/admin/users/customers" id="b957365c-3063-494e-bfa4-10d9b13824c3" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.318">
+    <testcase name="HTTP status is not 5xx" time="0.318" classname="V1AdminUsersCustomersGetApiV1AdminUsersCustomers"/>
+    <testcase name="Response time is acceptable" time="0.318" classname="V1AdminUsersCustomersGetApiV1AdminUsersCustomers"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.318" classname="V1AdminUsersCustomersGetApiV1AdminUsersCustomers"/>
+    <testcase name="Response body is valid JSON object/array" time="0.318" classname="V1AdminUsersCustomersGetApiV1AdminUsersCustomers"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.318" classname="V1AdminUsersCustomersGetApiV1AdminUsersCustomers"/>
+  </testsuite>
+  <testsuite name="v1 / admin / users / customers / [GET] api/v1/admin/users/customers/{customerId}" id="dc508371-3f6f-41bd-beb6-10ac2044da8b" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.304">
+    <testcase name="HTTP status is not 5xx" time="0.304" classname="V1AdminUsersCustomersGetApiV1AdminUsersCustomersCustomerId"/>
+    <testcase name="Response time is acceptable" time="0.304" classname="V1AdminUsersCustomersGetApiV1AdminUsersCustomersCustomerId"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.304" classname="V1AdminUsersCustomersGetApiV1AdminUsersCustomersCustomerId"/>
+    <testcase name="Response body is valid JSON object/array" time="0.304" classname="V1AdminUsersCustomersGetApiV1AdminUsersCustomersCustomerId"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.304" classname="V1AdminUsersCustomersGetApiV1AdminUsersCustomersCustomerId"/>
+  </testsuite>
+  <testsuite name="v1 / admin / users / [GET] api/v1/admin/users" id="891da1a0-9eee-4cd3-abe5-c266da1ba832" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.313">
+    <testcase name="HTTP status is not 5xx" time="0.313" classname="V1AdminUsersGetApiV1AdminUsers"/>
+    <testcase name="Response time is acceptable" time="0.313" classname="V1AdminUsersGetApiV1AdminUsers"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.313" classname="V1AdminUsersGetApiV1AdminUsers"/>
+    <testcase name="Response body is valid JSON object/array" time="0.313" classname="V1AdminUsersGetApiV1AdminUsers"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.313" classname="V1AdminUsersGetApiV1AdminUsers"/>
+  </testsuite>
+  <testsuite name="v1 / admin / users / [GET] api/v1/admin/users/{user}" id="f728913e-f49b-43ab-b1e7-84cec59b7abd" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.299">
+    <testcase name="HTTP status is not 5xx" time="0.299" classname="V1AdminUsersGetApiV1AdminUsersUser"/>
+    <testcase name="Response time is acceptable" time="0.299" classname="V1AdminUsersGetApiV1AdminUsersUser"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.299" classname="V1AdminUsersGetApiV1AdminUsersUser"/>
+    <testcase name="Response body is valid JSON object/array" time="0.299" classname="V1AdminUsersGetApiV1AdminUsersUser"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.299" classname="V1AdminUsersGetApiV1AdminUsersUser"/>
+  </testsuite>
+  <testsuite name="v1 / admin / permissions / [GET] api/v1/admin/permissions" id="b167f4ac-b52c-45c4-be8f-d24d46b742a2" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.872">
+    <testcase name="HTTP status is not 5xx" time="0.872" classname="V1AdminPermissionsGetApiV1AdminPermissions"/>
+    <testcase name="Response time is acceptable" time="0.872" classname="V1AdminPermissionsGetApiV1AdminPermissions"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.872" classname="V1AdminPermissionsGetApiV1AdminPermissions"/>
+    <testcase name="Response body is valid JSON object/array" time="0.872" classname="V1AdminPermissionsGetApiV1AdminPermissions"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.872" classname="V1AdminPermissionsGetApiV1AdminPermissions"/>
+  </testsuite>
+  <testsuite name="v1 / admin / permissions / [GET] api/v1/admin/permissions/{permission}" id="c5966034-ae59-4e20-a180-d20e69cd7153" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.438">
+    <testcase name="HTTP status is not 5xx" time="0.438" classname="V1AdminPermissionsGetApiV1AdminPermissionsPermission"/>
+    <testcase name="Response time is acceptable" time="0.438" classname="V1AdminPermissionsGetApiV1AdminPermissionsPermission"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.438" classname="V1AdminPermissionsGetApiV1AdminPermissionsPermission"/>
+    <testcase name="Response body is valid JSON object/array" time="0.438" classname="V1AdminPermissionsGetApiV1AdminPermissionsPermission"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.438" classname="V1AdminPermissionsGetApiV1AdminPermissionsPermission"/>
+  </testsuite>
+  <testsuite name="v1 / admin / roles / [GET] api/v1/admin/roles" id="840f2604-af6e-450b-a521-f3666f933649" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.309">
+    <testcase name="HTTP status is not 5xx" time="0.309" classname="V1AdminRolesGetApiV1AdminRoles"/>
+    <testcase name="Response time is acceptable" time="0.309" classname="V1AdminRolesGetApiV1AdminRoles"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.309" classname="V1AdminRolesGetApiV1AdminRoles"/>
+    <testcase name="Response body is valid JSON object/array" time="0.309" classname="V1AdminRolesGetApiV1AdminRoles"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.309" classname="V1AdminRolesGetApiV1AdminRoles"/>
+  </testsuite>
+  <testsuite name="v1 / admin / roles / [GET] api/v1/admin/roles/{role}" id="4170388d-66e5-4ff1-a1ed-56e728a35c16" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.322">
+    <testcase name="HTTP status is not 5xx" time="0.322" classname="V1AdminRolesGetApiV1AdminRolesRole"/>
+    <testcase name="Response time is acceptable" time="0.322" classname="V1AdminRolesGetApiV1AdminRolesRole"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.322" classname="V1AdminRolesGetApiV1AdminRolesRole"/>
+    <testcase name="Response body is valid JSON object/array" time="0.322" classname="V1AdminRolesGetApiV1AdminRolesRole"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.322" classname="V1AdminRolesGetApiV1AdminRolesRole"/>
+  </testsuite>
+  <testsuite name="v1 / admin / view-types / [GET] api/v1/admin/view-types" id="29ebcbb0-d6bf-42a9-9916-b9a1c4acd5ef" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.297">
+    <testcase name="HTTP status is not 5xx" time="0.297" classname="V1AdminViewTypesGetApiV1AdminViewTypes"/>
+    <testcase name="Response time is acceptable" time="0.297" classname="V1AdminViewTypesGetApiV1AdminViewTypes"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.297" classname="V1AdminViewTypesGetApiV1AdminViewTypes"/>
+    <testcase name="Response body is valid JSON object/array" time="0.297" classname="V1AdminViewTypesGetApiV1AdminViewTypes"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.297" classname="V1AdminViewTypesGetApiV1AdminViewTypes"/>
+  </testsuite>
+  <testsuite name="v1 / admin / view-types / [GET] api/v1/admin/view-types/{view_type}" id="da4c6817-9ba2-487b-be7c-68f746cdd631" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.298">
+    <testcase name="HTTP status is not 5xx" time="0.298" classname="V1AdminViewTypesGetApiV1AdminViewTypesViewType"/>
+    <testcase name="Response time is acceptable" time="0.298" classname="V1AdminViewTypesGetApiV1AdminViewTypesViewType"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.298" classname="V1AdminViewTypesGetApiV1AdminViewTypesViewType"/>
+    <testcase name="Response body is valid JSON object/array" time="0.298" classname="V1AdminViewTypesGetApiV1AdminViewTypesViewType"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.298" classname="V1AdminViewTypesGetApiV1AdminViewTypesViewType"/>
+  </testsuite>
+  <testsuite name="v1 / admin / sections / [GET] api/v1/admin/sections" id="89091884-d584-40e0-974c-a7a4f563eaf8" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.313">
+    <testcase name="HTTP status is not 5xx" time="0.313" classname="V1AdminSectionsGetApiV1AdminSections"/>
+    <testcase name="Response time is acceptable" time="0.313" classname="V1AdminSectionsGetApiV1AdminSections"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.313" classname="V1AdminSectionsGetApiV1AdminSections"/>
+    <testcase name="Response body is valid JSON object/array" time="0.313" classname="V1AdminSectionsGetApiV1AdminSections"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.313" classname="V1AdminSectionsGetApiV1AdminSections"/>
+  </testsuite>
+  <testsuite name="v1 / admin / sections / [GET] api/v1/admin/sections/{section}" id="61216944-06db-4422-b37e-c5baf6525090" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.687">
+    <testcase name="HTTP status is not 5xx" time="0.687" classname="V1AdminSectionsGetApiV1AdminSectionsSection"/>
+    <testcase name="Response time is acceptable" time="0.687" classname="V1AdminSectionsGetApiV1AdminSectionsSection"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.687" classname="V1AdminSectionsGetApiV1AdminSectionsSection"/>
+    <testcase name="Response body is valid JSON object/array" time="0.687" classname="V1AdminSectionsGetApiV1AdminSectionsSection"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.687" classname="V1AdminSectionsGetApiV1AdminSectionsSection"/>
+  </testsuite>
+  <testsuite name="v1 / admin / property-types / [GET] api/v1/admin/property-types" id="ac37a2c3-b767-4b7b-90e6-9b05c49a2656" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.313">
+    <testcase name="HTTP status is not 5xx" time="0.313" classname="V1AdminPropertyTypesGetApiV1AdminPropertyTypes"/>
+    <testcase name="Response time is acceptable" time="0.313" classname="V1AdminPropertyTypesGetApiV1AdminPropertyTypes"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.313" classname="V1AdminPropertyTypesGetApiV1AdminPropertyTypes"/>
+    <testcase name="Response body is valid JSON object/array" time="0.313" classname="V1AdminPropertyTypesGetApiV1AdminPropertyTypes"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.313" classname="V1AdminPropertyTypesGetApiV1AdminPropertyTypes"/>
+  </testsuite>
+  <testsuite name="v1 / admin / property-types / [GET] api/v1/admin/property-types/{property_type}" id="ded2d795-6333-4dff-b248-4154fccee7c3" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.317">
+    <testcase name="HTTP status is not 5xx" time="0.317" classname="V1AdminPropertyTypesGetApiV1AdminPropertyTypesPropertyType"/>
+    <testcase name="Response time is acceptable" time="0.317" classname="V1AdminPropertyTypesGetApiV1AdminPropertyTypesPropertyType"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.317" classname="V1AdminPropertyTypesGetApiV1AdminPropertyTypesPropertyType"/>
+    <testcase name="Response body is valid JSON object/array" time="0.317" classname="V1AdminPropertyTypesGetApiV1AdminPropertyTypesPropertyType"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.317" classname="V1AdminPropertyTypesGetApiV1AdminPropertyTypesPropertyType"/>
+  </testsuite>
+  <testsuite name="v1 / user-listing / [GET] api/v1/user-listing" id="33161c53-5c9d-4250-b89e-a2d26847e00f" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.648">
+    <testcase name="HTTP status is not 5xx" time="0.648" classname="V1UserListingGetApiV1UserListing"/>
+    <testcase name="Response time is acceptable" time="0.648" classname="V1UserListingGetApiV1UserListing"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.648" classname="V1UserListingGetApiV1UserListing"/>
+    <testcase name="Response body is valid JSON object/array" time="0.648" classname="V1UserListingGetApiV1UserListing"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.648" classname="V1UserListingGetApiV1UserListing"/>
+  </testsuite>
+  <testsuite name="v1 / user-listing / [GET] api/v1/user-listing/{user}" id="10fea0a7-9c0d-45ea-9343-5f1a5290aceb" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.311">
+    <testcase name="HTTP status is not 5xx" time="0.311" classname="V1UserListingGetApiV1UserListingUser"/>
+    <testcase name="Response time is acceptable" time="0.311" classname="V1UserListingGetApiV1UserListingUser"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.311" classname="V1UserListingGetApiV1UserListingUser"/>
+    <testcase name="Response body is valid JSON object/array" time="0.311" classname="V1UserListingGetApiV1UserListingUser"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.311" classname="V1UserListingGetApiV1UserListingUser"/>
+  </testsuite>
+  <testsuite name="v1 / user-listing / [GET] api/v1/user-listing/stats" id="6459e4a8-6760-4a1d-a1a5-e24e22fa82b7" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.299">
+    <testcase name="HTTP status is not 5xx" time="0.299" classname="V1UserListingGetApiV1UserListingStats"/>
+    <testcase name="Response time is acceptable" time="0.299" classname="V1UserListingGetApiV1UserListingStats"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.299" classname="V1UserListingGetApiV1UserListingStats"/>
+    <testcase name="Response body is valid JSON object/array" time="0.299" classname="V1UserListingGetApiV1UserListingStats"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.299" classname="V1UserListingGetApiV1UserListingStats"/>
+  </testsuite>
+  <testsuite name="v1 / customer / bookings / [GET] /api/v1/customer/bookings" id="6e69aa62-7f6f-441b-b454-723eec4b81a0" timestamp="2026-05-15T14:16:24.666Z" tests="5" failures="0" errors="0" time="0.302">
+    <testcase name="HTTP status is not 5xx" time="0.302" classname="V1CustomerBookingsGetApiV1CustomerBookings"/>
+    <testcase name="Response time is acceptable" time="0.302" classname="V1CustomerBookingsGetApiV1CustomerBookings"/>
+    <testcase name="Content-Type is JSON when body exists" time="0.302" classname="V1CustomerBookingsGetApiV1CustomerBookings"/>
+    <testcase name="Response body is valid JSON object/array" time="0.302" classname="V1CustomerBookingsGetApiV1CustomerBookings"/>
+    <testcase name="Standard envelope fields are valid when present" time="0.302" classname="V1CustomerBookingsGetApiV1CustomerBookings"/>
+  </testsuite>
+</testsuites>

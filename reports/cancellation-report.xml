@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Novas Cancellation Policy Regression Suite" tests="11" time="6.070">
+  <testsuite name="CANCELLATION POLICY | Login | Setup token" id="da2a5c69-61d4-4182-a098-4b5f3d6b2985" timestamp="2026-05-16T04:44:02.187Z" tests="2" failures="0" errors="0" time="1.289">
+    <testcase name="Login status is 200" time="1.289" classname="CancellationPolicyLoginSetupToken"/>
+    <testcase name="Token exists" time="1.289" classname="CancellationPolicyLoginSetupToken"/>
+  </testsuite>
+  <testsuite name="CANCELLATION POLICY | GET Policies | Valid token" id="dee8071f-894e-4ed7-8c46-5fa7d1dd94c5" timestamp="2026-05-16T04:44:02.187Z" tests="4" failures="0" errors="0" time="0.356">
+    <testcase name="Status acceptable" time="0.356" classname="CancellationPolicyGetPoliciesValidToken"/>
+    <testcase name="No server error" time="0.356" classname="CancellationPolicyGetPoliciesValidToken"/>
+    <testcase name="Policies response has data" time="0.356" classname="CancellationPolicyGetPoliciesValidToken"/>
+    <testcase name="Response time acceptable" time="0.356" classname="CancellationPolicyGetPoliciesValidToken"/>
+  </testsuite>
+  <testsuite name="CANCELLATION POLICY | GET Policies | Missing token" id="5a134e36-514d-4131-9729-c1976bc65627" timestamp="2026-05-16T04:44:02.187Z" tests="2" failures="0" errors="0" time="1.156">
+    <testcase name="Missing token rejected" time="1.156" classname="CancellationPolicyGetPoliciesMissingToken"/>
+    <testcase name="No server error" time="1.156" classname="CancellationPolicyGetPoliciesMissingToken"/>
+  </testsuite>
+  <testsuite name="CANCELLATION POLICY | GET Policies | Invalid token" id="616963ac-cefc-4ad3-93ec-20b6c3441a52" timestamp="2026-05-16T04:44:02.187Z" tests="2" failures="0" errors="0" time="0.882">
+    <testcase name="Invalid token rejected" time="0.882" classname="CancellationPolicyGetPoliciesInvalidToken"/>
+    <testcase name="No server error" time="0.882" classname="CancellationPolicyGetPoliciesInvalidToken"/>
+  </testsuite>
+  <testsuite name="CANCELLATION POLICY | GET Single Policy | Existing or saved id" id="6c9e52bf-124d-4a01-9942-eeda3f637ae3" timestamp="2026-05-16T04:44:02.187Z" tests="3" failures="0" errors="0" time="0.318">
+    <testcase name="Status acceptable" time="0.318" classname="CancellationPolicyGetSinglePolicyExistingOrSavedId"/>
+    <testcase name="No server error" time="0.318" classname="CancellationPolicyGetSinglePolicyExistingOrSavedId"/>
+    <testcase name="Response is JSON" time="0.318" classname="CancellationPolicyGetSinglePolicyExistingOrSavedId"/>
+  </testsuite>
+  <testsuite name="CANCELLATION POLICY | GET Single Policy | Invalid UUID" id="cda03f03-489b-40cd-ae1d-16f0905d0744" timestamp="2026-05-16T04:44:02.187Z" tests="2" failures="0" errors="0" time="0.333">
+    <testcase name="Invalid UUID handled safely" time="0.333" classname="CancellationPolicyGetSinglePolicyInvalidUuid"/>
+    <testcase name="No server error" time="0.333" classname="CancellationPolicyGetSinglePolicyInvalidUuid"/>
+  </testsuite>
+  <testsuite name="CANCELLATION POLICY | GET Single Policy | Malformed UUID" id="58add787-0405-4431-84be-4d431402fa3c" timestamp="2026-05-16T04:44:02.187Z" tests="2" failures="0" errors="0" time="0.291">
+    <testcase name="Malformed UUID handled safely" time="0.291" classname="CancellationPolicyGetSinglePolicyMalformedUuid"/>
+    <testcase name="No server error" time="0.291" classname="CancellationPolicyGetSinglePolicyMalformedUuid"/>
+  </testsuite>
+  <testsuite name="CANCELLATION POLICY | GET Policies | Invalid pagination" id="17bd76e5-eb4d-4fb6-b5bc-276e25168c29" timestamp="2026-05-16T04:44:02.187Z" tests="2" failures="0" errors="0" time="0.378">
+    <testcase name="Invalid pagination handled safely" time="0.378" classname="CancellationPolicyGetPoliciesInvalidPagination"/>
+    <testcase name="No server error" time="0.378" classname="CancellationPolicyGetPoliciesInvalidPagination"/>
+  </testsuite>
+  <testsuite name="CANCELLATION POLICY | GET Policies | SQL injection search" id="0367bbca-3e73-4a2e-a8e0-cb42a045daba" timestamp="2026-05-16T04:44:02.187Z" tests="2" failures="0" errors="0" time="0.410">
+    <testcase name="SQL injection handled safely" time="0.410" classname="CancellationPolicyGetPoliciesSqlInjectionSearch"/>
+    <testcase name="Response is not server error" time="0.410" classname="CancellationPolicyGetPoliciesSqlInjectionSearch"/>
+  </testsuite>
+  <testsuite name="CANCELLATION POLICY | GET Policies | XSS search" id="582852c8-2983-4228-8c2d-ed05aa1ddc37" timestamp="2026-05-16T04:44:02.187Z" tests="2" failures="0" errors="0" time="0.369">
+    <testcase name="XSS handled safely" time="0.369" classname="CancellationPolicyGetPoliciesXssSearch"/>
+    <testcase name="Response body does not echo script unsafely" time="0.369" classname="CancellationPolicyGetPoliciesXssSearch"/>
+  </testsuite>
+  <testsuite name="CANCELLATION POLICY | POST Create Policy | Empty payload validation" id="9e9673f0-d7e3-4dee-a221-8a9233b3baf7" timestamp="2026-05-16T04:44:02.187Z" tests="3" failures="0" errors="0" time="0.288">
+    <testcase name="Validation or auth status acceptable" time="0.288" classname="CancellationPolicyPostCreatePolicyEmptyPayloadValidation"/>
+    <testcase name="No server error" time="0.288" classname="CancellationPolicyPostCreatePolicyEmptyPayloadValidation"/>
+    <testcase name="Validation response success false" time="0.288" classname="CancellationPolicyPostCreatePolicyEmptyPayloadValidation"/>
+  </testsuite>
+</testsuites>

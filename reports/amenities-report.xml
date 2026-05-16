@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Novas Amenities Regression Suite" tests="12" time="5.910">
+  <testsuite name="AMENITIES | Login | Setup token" id="6508bea5-fd0d-4cbd-b5f1-36132dec00ac" timestamp="2026-05-16T04:50:55.790Z" tests="2" failures="0" errors="0" time="1.218">
+    <testcase name="Login status is 200" time="1.218" classname="AmenitiesLoginSetupToken"/>
+    <testcase name="Token exists" time="1.218" classname="AmenitiesLoginSetupToken"/>
+  </testsuite>
+  <testsuite name="AMENITIES | GET Amenity Types | Valid token" id="83d699cc-63ea-405b-9e73-9cbc1cd84f8b" timestamp="2026-05-16T04:50:55.790Z" tests="4" failures="0" errors="0" time="0.304">
+    <testcase name="Status acceptable" time="0.304" classname="AmenitiesGetAmenityTypesValidToken"/>
+    <testcase name="No server error" time="0.304" classname="AmenitiesGetAmenityTypesValidToken"/>
+    <testcase name="Response has data" time="0.304" classname="AmenitiesGetAmenityTypesValidToken"/>
+    <testcase name="Response time acceptable" time="0.304" classname="AmenitiesGetAmenityTypesValidToken"/>
+  </testsuite>
+  <testsuite name="AMENITIES | GET Amenity Categories | Valid token" id="ba61e75a-5ad4-4648-9a9c-9ff3d08b0b13" timestamp="2026-05-16T04:50:55.790Z" tests="3" failures="0" errors="0" time="0.297">
+    <testcase name="Status acceptable" time="0.297" classname="AmenitiesGetAmenityCategoriesValidToken"/>
+    <testcase name="No server error" time="0.297" classname="AmenitiesGetAmenityCategoriesValidToken"/>
+    <testcase name="Response has data" time="0.297" classname="AmenitiesGetAmenityCategoriesValidToken"/>
+  </testsuite>
+  <testsuite name="AMENITIES | GET Amenity Types | Missing token" id="c5e7399d-190c-427a-a698-53e72dd7e2f5" timestamp="2026-05-16T04:50:55.790Z" tests="2" failures="0" errors="0" time="1.126">
+    <testcase name="Missing token rejected" time="1.126" classname="AmenitiesGetAmenityTypesMissingToken"/>
+    <testcase name="No server error" time="1.126" classname="AmenitiesGetAmenityTypesMissingToken"/>
+  </testsuite>
+  <testsuite name="AMENITIES | GET Amenity Types | Invalid token" id="1df77d71-45c1-4f05-b553-c526800c4c4f" timestamp="2026-05-16T04:50:55.790Z" tests="2" failures="0" errors="0" time="0.866">
+    <testcase name="Invalid token rejected" time="0.866" classname="AmenitiesGetAmenityTypesInvalidToken"/>
+    <testcase name="No server error" time="0.866" classname="AmenitiesGetAmenityTypesInvalidToken"/>
+  </testsuite>
+  <testsuite name="AMENITIES | GET Single Amenity Type | Existing or saved id" id="00a619f4-bbcc-4a3e-b986-2dbced8b5405" timestamp="2026-05-16T04:50:55.790Z" tests="3" failures="0" errors="0" time="0.301">
+    <testcase name="Status acceptable" time="0.301" classname="AmenitiesGetSingleAmenityTypeExistingOrSavedId"/>
+    <testcase name="No server error" time="0.301" classname="AmenitiesGetSingleAmenityTypeExistingOrSavedId"/>
+    <testcase name="Response is JSON" time="0.301" classname="AmenitiesGetSingleAmenityTypeExistingOrSavedId"/>
+  </testsuite>
+  <testsuite name="AMENITIES | GET Single Amenity Type | Invalid UUID" id="43c5d4e3-ce47-4d54-9bfb-4914e24b2f21" timestamp="2026-05-16T04:50:55.790Z" tests="2" failures="0" errors="0" time="0.295">
+    <testcase name="Invalid UUID handled safely" time="0.295" classname="AmenitiesGetSingleAmenityTypeInvalidUuid"/>
+    <testcase name="No server error" time="0.295" classname="AmenitiesGetSingleAmenityTypeInvalidUuid"/>
+  </testsuite>
+  <testsuite name="AMENITIES | GET Single Amenity Type | Malformed UUID" id="a65160ca-01dd-410c-87c4-a98a1785c3fc" timestamp="2026-05-16T04:50:55.790Z" tests="2" failures="0" errors="0" time="0.285">
+    <testcase name="Malformed UUID handled safely" time="0.285" classname="AmenitiesGetSingleAmenityTypeMalformedUuid"/>
+    <testcase name="No server error" time="0.285" classname="AmenitiesGetSingleAmenityTypeMalformedUuid"/>
+  </testsuite>
+  <testsuite name="AMENITIES | GET Amenity Types | Invalid pagination" id="96c2fc19-6337-45c5-8ff1-ad438c49ab05" timestamp="2026-05-16T04:50:55.790Z" tests="2" failures="0" errors="0" time="0.325">
+    <testcase name="Invalid pagination handled safely" time="0.325" classname="AmenitiesGetAmenityTypesInvalidPagination"/>
+    <testcase name="No server error" time="0.325" classname="AmenitiesGetAmenityTypesInvalidPagination"/>
+  </testsuite>
+  <testsuite name="AMENITIES | GET Amenity Types | SQL injection search" id="e82be039-622c-4406-8062-2ce48ecddcb3" timestamp="2026-05-16T04:50:55.790Z" tests="2" failures="0" errors="0" time="0.299">
+    <testcase name="SQL injection handled safely" time="0.299" classname="AmenitiesGetAmenityTypesSqlInjectionSearch"/>
+    <testcase name="Response is not server error" time="0.299" classname="AmenitiesGetAmenityTypesSqlInjectionSearch"/>
+  </testsuite>
+  <testsuite name="AMENITIES | GET Amenity Types | XSS search" id="5e9cc33b-d65d-4e90-a225-a8d9cd0cd832" timestamp="2026-05-16T04:50:55.790Z" tests="2" failures="0" errors="0" time="0.295">
+    <testcase name="XSS handled safely" time="0.295" classname="AmenitiesGetAmenityTypesXssSearch"/>
+    <testcase name="Response body does not echo script unsafely" time="0.295" classname="AmenitiesGetAmenityTypesXssSearch"/>
+  </testsuite>
+  <testsuite name="AMENITIES | POST Create Amenity Type | Empty payload validation" id="78719a7e-9e24-4b49-b870-adcd7826e385" timestamp="2026-05-16T04:50:55.790Z" tests="3" failures="0" errors="0" time="0.299">
+    <testcase name="Validation or auth status acceptable" time="0.299" classname="AmenitiesPostCreateAmenityTypeEmptyPayloadValidation"/>
+    <testcase name="No server error" time="0.299" classname="AmenitiesPostCreateAmenityTypeEmptyPayloadValidation"/>
+    <testcase name="Validation response success false" time="0.299" classname="AmenitiesPostCreateAmenityTypeEmptyPayloadValidation"/>
+  </testsuite>
+</testsuites>
