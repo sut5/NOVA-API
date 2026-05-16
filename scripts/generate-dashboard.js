@@ -105,7 +105,7 @@ const html = `
       const exists = fs.existsSync(path.join(__dirname, '../reports', r.file));
       return `
       <div class="card">
-        <a href="./${r.file}" target="_blank">${r.name}</a>
+        <a href="./${r.file}">${r.name}</a>
         <p>${exists ? 'Open detailed regression execution report.' : 'Report not yet generated.'}</p>
       </div>
       `;
